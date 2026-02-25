@@ -1,731 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PFTSR72P');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PFTSR72P');</script>
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="public/favicon.png">
   <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1420027179611339');
-  fbq('track', 'PageView');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1420027179611339');
+    fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1420027179611339&ev=PageView&noscript=1"
-  /></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1420027179611339&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
-  <!-- Edit this copy for your changes. Original: live-style.html -->
-  <title>OughtaBee AI — Clone Your Brain (Variant — edit this copy)</title>
-  <style>
-    :root {
-      --color-bg: #ffffff;
-      --color-text: #333333;
-      --color-text-light: #666666;
-      --color-heading: #222222;
-      --color-red: #c02b0a;
-      --color-red-hover: #a02208;
-      --color-cream: #fffbcc;
-      --color-cream-border: #e8e2a0;
-      --color-border: #d4d4d4;
-      --color-border-light: #e8e8e8;
-      --color-placeholder-bg: #e0e0e0;
-      --font-serif: Georgia, 'Times New Roman', serif;
-      --font-sans: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-      --max-width: 720px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: var(--font-sans);
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--color-text);
-      background: var(--color-bg);
-      -webkit-font-smoothing: antialiased;
-    }
-    .header {
-      border-bottom: 1px solid var(--color-border-light);
-      padding: 14px 24px;
-      background: #fafafa;
-    }
-    .header-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-family: var(--font-serif);
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--color-heading);
-      text-decoration: none;
-    }
-    .logo span { color: var(--color-red); }
-    .header-nav a {
-      font-size: 13px;
-      color: var(--color-text-light);
-      text-decoration: none;
-      margin-left: 20px;
-    }
-    .header-nav a:hover { color: var(--color-red); }
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .hero {
-      text-align: center;
-      padding: 60px 0 40px;
-    }
-    .hero h1 {
-      font-family: var(--font-serif);
-      font-size: 38px;
-      line-height: 1.25;
-      color: var(--color-heading);
-      font-weight: normal;
-      margin-bottom: 24px;
-    }
-    .hero .subtitle {
-      font-size: 17px;
-      line-height: 1.7;
-      color: var(--color-text);
-      max-width: 620px;
-      margin: 0 auto 32px;
-    }
-    /* Hero B: pain-point cards */
-    .hero-b {
-      background: #fff;
-      padding: 48px 0 52px;
-      border-bottom: 1px solid var(--color-border-light);
-    }
-    .hero-b .hero-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin: 28px 0 32px;
-      max-width: 620px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .hero-b .hero-card {
-      text-align: center;
-      padding: 20px 16px;
-      background: #f5f0e1;
-      border: 1px solid #e8e2c4;
-      border-radius: 10px;
-    }
-    .hero-b .hero-card .card-icon {
-      width: 44px;
-      height: 44px;
-      margin: 0 auto 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-red);
-    }
-    .hero-b .hero-card .card-icon svg { width: 28px; height: 28px; fill: currentColor; }
-    .hero-b .hero-card .card-text {
-      font-size: 14px;
-      font-style: italic;
-      color: #5c4a0f;
-      line-height: 1.4;
-      margin: 0;
-    }
-    .hero-b .subtitle { margin-bottom: 24px; }
-    @media (max-width: 680px) {
-      .hero-b .hero-cards { grid-template-columns: 1fr; }
-    }
-    .cta-button {
-      display: inline-block;
-      background: var(--color-red);
-      color: #ffffff;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 14px 36px;
-      border-radius: 4px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .cta-button:hover { background: var(--color-red-hover); }
-    .cta-button-small { font-size: 14px; padding: 10px 28px; }
-    .section { padding: 40px 0; }
-    .section + .section { border-top: 1px solid var(--color-border-light); }
-    .cream-section {
-      background: var(--color-cream);
-      border-top: 1px solid var(--color-cream-border);
-      border-bottom: 1px solid var(--color-cream-border);
-      padding: 36px 0;
-      margin: 40px 0;
-    }
-    .cream-section .container { max-width: var(--max-width); }
-    h2 {
-      font-family: var(--font-serif);
-      font-size: 30px;
-      line-height: 1.3;
-      color: var(--color-heading);
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-    h3 {
-      font-family: var(--font-serif);
-      font-size: 22px;
-      line-height: 1.35;
-      color: var(--color-heading);
-      font-weight: normal;
-      margin-bottom: 16px;
-    }
-    p { margin-bottom: 16px; }
-    strong { color: var(--color-heading); }
-    a { color: var(--color-red); text-decoration: underline; }
-    a:hover { color: var(--color-red-hover); }
-    .bullet-list { list-style: none; padding: 0; margin: 16px 0; }
-    .bullet-list li {
-      padding: 6px 0 6px 24px;
-      position: relative;
-    }
-    .bullet-list li::before {
-      content: "\2022";
-      color: var(--color-red);
-      font-weight: bold;
-      font-size: 20px;
-      position: absolute;
-      left: 0;
-      top: 4px;
-    }
-    .step {
-      margin-bottom: 28px;
-      padding-left: 48px;
-      position: relative;
-    }
-    .step-number {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--color-red);
-      color: #fff;
-      font-size: 16px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .step h3 { margin-bottom: 8px; }
-    .step p { margin-bottom: 8px; }
-    .checklist { list-style: none; padding: 0; margin: 20px 0; }
-    .checklist li {
-      padding: 8px 0 8px 28px;
-      position: relative;
-      font-size: 16px;
-    }
-    .checklist li::before {
-      content: "\2713";
-      color: #2a7d2a;
-      font-weight: bold;
-      font-size: 16px;
-      position: absolute;
-      left: 0;
-      top: 8px;
-    }
-    .deal-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
-      margin: 24px 0;
-    }
-    .deal-card {
-      border: 1px solid var(--color-border);
-      border-radius: 6px;
-      padding: 24px 20px;
-      text-align: center;
-    }
-    .deal-card .deal-icon { font-size: 32px; margin-bottom: 12px; }
-    .deal-card h3 { font-size: 18px; margin-bottom: 8px; }
-    .deal-card p { font-size: 14px; color: var(--color-text-light); margin-bottom: 0; }
-    .highlight-box {
-      border: 2px solid var(--color-border);
-      border-radius: 6px;
-      padding: 28px 32px;
-      margin: 32px 0;
-      background: #fcfcfc;
-    }
-    .highlight-box h3 { margin-bottom: 12px; }
-    .cta-box {
-      border: 3px solid var(--color-heading);
-      border-radius: 6px;
-      padding: 40px;
-      margin: 40px 0;
-      text-align: center;
-      background: #fafafa;
-    }
-    .cta-box h2 { margin-bottom: 16px; }
-    .cta-box p { max-width: 540px; margin: 0 auto 20px; }
-    .team-member {
-      display: flex;
-      gap: 24px;
-      margin-bottom: 32px;
-      align-items: flex-start;
-    }
-    .team-headshot {
-      width: 120px;
-      height: 140px;
-      min-width: 120px;
-      background: var(--color-placeholder-bg);
-      border: 3px solid #fff;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: var(--color-text-light);
-      text-align: center;
-      transform: rotate(-2deg);
-      overflow: hidden;
-    }
-    .team-headshot img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .team-member:nth-child(even) .team-headshot { transform: rotate(2deg); }
-    .team-member h3 { margin-bottom: 6px; }
-    .team-role {
-      font-size: 14px;
-      font-style: italic;
-      color: var(--color-text-light);
-      margin-bottom: 10px;
-    }
-    .guarantee-box {
-      border: 3px solid var(--color-red);
-      border-radius: 6px;
-      padding: 36px;
-      margin: 40px 0;
-      background: #fff8f6;
-    }
-    .guarantee-box h2 {
-      color: var(--color-red);
-      text-align: center;
-      margin-bottom: 8px;
-    }
-    .guarantee-subtitle {
-      text-align: center;
-      font-style: italic;
-      color: var(--color-text-light);
-      margin-bottom: 24px;
-    }
-    .bonus {
-      border-left: 4px solid var(--color-red);
-      padding-left: 24px;
-      margin-bottom: 28px;
-    }
-    .bonus-label {
-      display: inline-block;
-      background: var(--color-red);
-      color: #fff;
-      font-size: 12px;
-      font-weight: bold;
-      padding: 2px 10px;
-      border-radius: 3px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .bonus-value { font-size: 14px; color: var(--color-text-light); font-style: italic; }
-    .icon-row {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
-      margin: 28px 0;
-    }
-    .icon-placeholder {
-      width: 72px;
-      height: 72px;
-      background: var(--color-placeholder-bg);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      color: var(--color-text-light);
-      text-align: center;
-      line-height: 1.2;
-      padding: 4px;
-    }
-    /* Highrise-style data sources: cream background, icons + copy points */
-    .data-sources-section {
-      background: #f5f0e1;
-      border-top: 1px solid #e8e2c4;
-      border-bottom: 1px solid #e8e2c4;
-      padding: 44px 0;
-      margin: 0;
-    }
-    .data-sources-section .container { max-width: var(--max-width); }
-    .data-sources-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      margin-top: 28px;
-    }
-    .data-source-card {
-      text-align: center;
-      padding: 20px 12px;
-      background: #fff;
-      border-radius: 10px;
-      border: 1px solid #e8e2c4;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .data-source-card .source-icon {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 12px;
-      background: #faf8f0;
-      color: #8b6914;
-    }
-    .data-source-card .source-icon svg {
-      width: 32px;
-      height: 32px;
-      display: block;
-      fill: currentColor;
-    }
-    .data-source-card .source-name {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--color-heading);
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
-    .data-source-card .copy-point {
-      font-size: 13px;
-      font-style: italic;
-      color: #8b6914;
-      line-height: 1.4;
-      margin: 0;
-    }
-    @media (max-width: 680px) {
-      .data-sources-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 420px) {
-      .data-sources-grid { grid-template-columns: 1fr; }
-    }
-    .scarcity { text-align: center; padding: 32px 0; }
-    .scarcity h2 { color: var(--color-red); }
-    .divider { border: none; border-top: 1px solid var(--color-border); margin: 40px 0; }
-    .ps-section { font-size: 15px; color: var(--color-text-light); padding: 40px 0 20px; }
-    .ps-section strong { color: var(--color-text); }
-    .footer {
-      text-align: center;
-      padding: 40px 0;
-      border-top: 1px solid var(--color-border-light);
-      font-size: 13px;
-      color: var(--color-text-light);
-    }
-    @media (max-width: 680px) {
-      .hero h1 { font-size: 28px; }
-      h2 { font-size: 24px; }
-      .deal-grid { grid-template-columns: 1fr; }
-      .team-member { flex-direction: column; align-items: center; text-align: center; }
-      .cta-box, .guarantee-box { padding: 28px 20px; }
-    }
-  </style>
+  <title>OughtaBee AI — Clone Your Brain. Scale Your Voice.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFTSR72P"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFTSR72P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ═══ HEADER ═══ -->
   <header class="header">
-    <div class="header-inner">
-      <a href="#" class="logo">Oughta <span>Bee</span> AI</a>
-      <nav class="header-nav">
-        <a href="#how">How It Works</a>
-        <a href="#team">About Us</a>
-        <a href="https://leads.oughtabee.ai/apply">Apply Now</a>
-        <a href="https://blog.oughtabee.ai/">Blog</a>
-      </nav>
-    </div>
+    <a href="index.html" class="header-logo">
+      <img src="public/logo.webp" alt="OughtaBee AI" class="header-logo-icon">
+      <span class="header-logo-text">OughtaBee AI</span>
+    </a>
+    <button class="mobile-toggle" aria-label="Menu">
+      <i data-lucide="menu" style="width:24px;height:24px"></i>
+    </button>
+    <nav class="header-nav">
+      <a href="#how">How It Works</a>
+      <a href="#team">About Us</a>
+      <a href="https://blog.oughtabee.ai/">Blog</a>
+      <a href="https://leads.oughtabee.ai/apply" class="btn-primary btn-primary--sm">Apply Now <span>&rarr;</span></a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero hero-b">
-      <div class="container">
-        <h1>Coaches don't have a marketing problem. They have a capacity problem. Your AI clone solves it in 14 days, free to prove it.</h1>
-        <div class="hero-cards">
-          <div class="hero-card">
-            <div class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 10v-4c0-3.31-2.69-6-6-6s-6 2.69-6 6v4H4v12h16V10h-2zm-8-4c0-2.21 1.79-4 4-4s4 1.79 4 4v4h-8V6z"/></svg></div>
-            <p class="card-text">Zoom calls & content gathering dust</p>
-          </div>
-          <div class="hero-card">
-            <div class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
-            <p class="card-text">One you. Can't scale your voice.</p>
-          </div>
-          <div class="hero-card">
-            <div class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-            <p class="card-text">We clone it. $0 upfront. 14 days.</p>
-          </div>
+  <!-- ═══ URGENCY BANNER ═══ -->
+  <div class="urgency-banner fade-in">
+    <span class="urgency-dot"></span>
+    <span class="urgency-text">Limited to 7 Founders Per Month</span>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="fade-in">Coaches don&rsquo;t have a marketing problem.<br><span class="hero-h1-accent">They have a capacity problem.</span></h1>
+      <p class="hero-subline fade-in">Your AI clone solves it in <strong>14 days</strong>, free to prove it.</p>
+      <div class="hero-proof fade-in">
+        <div class="hero-proof-item">
+          <i data-lucide="video" style="width:18px;height:18px;color:var(--primary)"></i>
+          <span>Zoom calls &amp; content gathering dust</span>
         </div>
-        <p class="subtitle">You have 3 years of Zoom calls and content gathering dust. We turn that data into an autonomous agent that coaches your students exactly like you do.</p>
-        <a href="https://leads.oughtabee.ai/apply" class="cta-button">Apply For Your Free Prototype</a>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>You are a high-performing coach or founder generating between $500k and $5M in revenue.</h2>
-        <p>You have a thriving community and clients paying you thousands per month for your expertise. On paper, you are winning.</p>
-        <p><strong>Your business is capped because it relies entirely on your brain.</strong> Your clients pay for <em>you</em> — your voice, your specific advice, your unique framework.</p>
-        <ul class="bullet-list">
-          <li>You want to expand your reach, but you cannot add a single hour to your calendar without burning out.</li>
-          <li>You have no mental excess capacity left to create the high-volume content required to dominate your niche.</li>
-          <li>You are doing a "C+ job" at 10 different things instead of an A+ job at the one thing that generates revenue.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section data-sources-section">
-      <div class="container">
-        <h2>You need a digital clone of yourself.</h2>
-        <p>Launch Your "AI Digital Twin" in 14 Days for $0.<br>Keep Charging $10k+ for <em>You</em>.<br>Sell "AI You" to Everyone Else for $97/mo or any price you want.</p>
-        <p>Stop leaving millions on the table because you don't have the time to serve the masses. We will build a functional Phase 1 Prototype of your AI Brain using your existing proprietary content — completely free.</p>
-        <div class="data-sources-grid">
-          <div class="data-source-card">
-            <div class="source-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.71 3.5L1.15 15l3.42 6h5.99l6.56-11.5L13.7 3.5H7.71zm.58 1.5h3.99l5.34 9.33-2.66 4.67H5.43l2.86-14zM15.12 15l2.28 4h5.99l3.42-6-2.28-4h-9.41zm2.85-1.5L22.85 15 19.43 21h-5.99l-2.28-4h5.99z"/></svg></div>
-            <div class="source-name">Google Drive</div>
-            <p class="copy-point">Where are those unfinished SOPs and frameworks?</p>
-          </div>
-          <div class="data-source-card">
-            <div class="source-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
-            <div class="source-name">YouTube</div>
-            <p class="copy-point">Which video had that framework explanation?</p>
-          </div>
-          <div class="data-source-card">
-            <div class="source-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 7.191C4.603 5.158 3.834 4.142 3.01 4.142c-.179 0-.806.378-1.881 1.132L0 3.729a315.065 315.065 0 0 0 3.501-3.128C5.08.068 6.266-.042 7.056.036c1.867.2 3.16 1.239 3.876 3.115.711 1.837 1.236 2.98 1.576 3.43.363.697.775 1.042 1.236 1.042.348 0 .871-.274 1.559-.822.696-.547 1.106-.821 1.229-.821.261 0 .475.216.475.498 0 .156-.052.382-.156.676-.098.308-.17.525-.217.652-.054.308-.027.465.078.57.319.319 1.077.227 1.716-.227.696-.498 1.243-1.201 1.65-2.119.403-.916.61-1.805.61-2.656-.002-.403-.091-.734-.273-.992-.182-.261-.435-.391-.757-.391-.261 0-.652.13-1.163.391-.516.261-.883.391-1.105.391z"/></svg></div>
-            <div class="source-name">Vimeo</div>
-            <p class="copy-point">Which training session covered that?</p>
-          </div>
-          <div class="data-source-card">
-            <div class="source-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zM8.5 13H10v4H8.5v-4zm3.5 0h1.2c.6 0 1.1.4 1.1 1s-.5 1-1.1 1H12v2h-1V13zm3.5 0c.8 0 1.5.7 1.5 1.5v1c0 .8-.7 1.5-1.5 1.5H14v-4h1.5zm.5 2.5c.3 0 .5-.2.5-.5v-1c0-.3-.2-.5-.5-.5H14v2h.5z"/></svg></div>
-            <div class="source-name">PDFs</div>
-            <p class="copy-point">What did we decide in that doc?</p>
-          </div>
-          <div class="data-source-card">
-            <div class="source-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a5 5 0 0 1 5 5v6a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5zM3 11v1a9 9 0 0 0 18 0v-1h2v1a11 11 0 0 1-10 10.946V23h2v-2h2v2h2v-2h2v-1.054A11 11 0 0 1 1 12v-1h2zm9 9a7 7 0 0 0 7-7v-1H5v1a7 7 0 0 0 7 7z"/></svg></div>
-            <div class="source-name">Coaching Calls</div>
-            <p class="copy-point">What did I tell that client in the last call?</p>
-          </div>
+        <div class="hero-proof-divider"></div>
+        <div class="hero-proof-item">
+          <i data-lucide="user" style="width:18px;height:18px;color:var(--secondary)"></i>
+          <span>One you. Can&rsquo;t scale your voice.</span>
+        </div>
+        <div class="hero-proof-divider"></div>
+        <div class="hero-proof-item hero-proof-item--accent">
+          <i data-lucide="sparkles" style="width:18px;height:18px;color:var(--primary)"></i>
+          <span>We clone it. $0 upfront. 14 days.</span>
         </div>
       </div>
-    </section>
+      <p class="hero-desc fade-in">You have 3 years of Zoom calls and content gathering dust. We turn that into an autonomous agent that coaches your students exactly like you&nbsp;do.</p>
+      <div class="hero-cta-row fade-in">
+        <a href="https://leads.oughtabee.ai/apply" class="btn-primary">Apply For Your Free Prototype <span>&rarr;</span></a>
+        <span class="hero-cta-note">No credit card. No commitment.</span>
+      </div>
+    </div>
+    <div class="hero-animation" aria-hidden="true"></div>
+  </section>
 
-    <section class="section" id="deal">
-      <div class="container">
-        <h2>The Deal</h2>
-        <div class="deal-grid">
-          <div class="deal-card">
-            <div class="deal-icon">🚀</div>
-            <h3>The Deliverable</h3>
-            <p>We ingest your data and build a custom Phase 1 Prototype that thinks, speaks, and solves problems exactly like you.</p>
-          </div>
-          <div class="deal-card">
-            <div class="deal-icon">💰</div>
-            <h3>The Price</h3>
-            <p>$0 Upfront. This is a 100% Risk-Free Pilot. You only pay to unlock the full build <em>after</em> you see it work.</p>
-          </div>
-          <div class="deal-card">
-            <div class="deal-icon">⚡</div>
-            <h3>The Timeline</h3>
-            <p>14-Day Sprint. We move fast so you can start monetizing immediately.</p>
-          </div>
+  <!-- ═══ TARGET AUDIENCE ═══ -->
+  <section class="audience fade-in">
+    <h2>You are a high-performing coach or founder generating between $500k and $5M in revenue.</h2>
+    <p class="audience-body">You have a thriving community and clients paying you thousands per month for your expertise. On paper, you are winning. Your business is capped because it relies entirely on your brain.</p>
+    <div class="audience-bullets">
+      <div class="bullet-row">
+        <div class="bullet-icon bullet-icon--yellow"><i data-lucide="flame" style="width:16px;height:16px;color:var(--secondary)"></i></div>
+        <p class="bullet-text">You want to expand your reach, but you cannot add a single hour to your calendar without burning out.</p>
+      </div>
+      <div class="bullet-row">
+        <div class="bullet-icon bullet-icon--teal"><i data-lucide="brain" style="width:16px;height:16px;color:var(--primary)"></i></div>
+        <p class="bullet-text">You have no mental excess capacity left to create the high-volume content required to dominate your niche.</p>
+      </div>
+      <div class="bullet-row">
+        <div class="bullet-icon bullet-icon--yellow"><i data-lucide="target" style="width:16px;height:16px;color:var(--secondary)"></i></div>
+        <p class="bullet-text">You are doing a &ldquo;C+ job&rdquo; at 10 different things instead of an A+ job at the one thing that generates revenue.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DIGITAL CLONE (DARK) ═══ -->
+  <section class="clone">
+    <span class="section-label fade-in">THE SOLUTION</span>
+    <h2 class="fade-in">You need a digital clone of yourself.</h2>
+    <div class="clone-body fade-in">
+      <p class="clone-highlight">Launch Your &ldquo;AI Digital Twin&rdquo; in 14 Days for $0.</p>
+      <p class="clone-sub">Keep Charging $10k+ for You. Sell &ldquo;AI You&rdquo; to Everyone Else for $97/mo.</p>
+      <p class="clone-detail">Stop leaving millions on the table because you don&rsquo;t have the time to serve the masses. We will build a functional Phase 1 Prototype of your AI Brain using your existing proprietary content &mdash; completely free.</p>
+    </div>
+    <span class="clone-ds-label fade-in">WE INGEST DATA FROM</span>
+    <div class="ds-grid fade-in">
+      <div class="ds-card">
+        <img src="https://api.iconify.design/logos/google-drive.svg" alt="Google Drive" width="24" height="24">
+        <span class="ds-card-name">Google Drive</span>
+        <span class="ds-card-desc">Unfinished SOPs &amp; frameworks</span>
+      </div>
+      <div class="ds-card">
+        <img src="https://api.iconify.design/logos/youtube-icon.svg" alt="YouTube" width="24" height="24">
+        <span class="ds-card-name">YouTube</span>
+        <span class="ds-card-desc">Framework explanation videos</span>
+      </div>
+      <div class="ds-card">
+        <img src="https://api.iconify.design/logos/vimeo-icon.svg" alt="Vimeo" width="24" height="24">
+        <span class="ds-card-name">Vimeo</span>
+        <span class="ds-card-desc">Training session recordings</span>
+      </div>
+      <div class="ds-card">
+        <i data-lucide="file-text" style="width:24px;height:24px;color:var(--secondary)"></i>
+        <span class="ds-card-name">PDFs &amp; Docs</span>
+        <span class="ds-card-desc">Internal documents &amp; SOPs</span>
+      </div>
+      <div class="ds-card">
+        <img src="https://api.iconify.design/logos/zoom-icon.svg" alt="Zoom" width="24" height="24">
+        <span class="ds-card-name">Coaching Calls</span>
+        <span class="ds-card-desc">Recorded client sessions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE DEAL ═══ -->
+  <section class="deal fade-in">
+    <span class="section-label">THE DEAL</span>
+    <h2>Zero risk. Zero upfront. Pure results.</h2>
+    <div class="deal-cards">
+      <div class="deal-card deal-card--neutral">
+        <i data-lucide="rocket" style="width:32px;height:32px;color:var(--primary)"></i>
+        <span class="deal-card-title">Deliverable</span>
+        <p class="deal-card-body">We ingest your data and build a custom Phase 1 Prototype that thinks, speaks, and solves problems exactly like you.</p>
+      </div>
+      <div class="deal-card deal-card--teal">
+        <i data-lucide="circle-dollar-sign" style="width:32px;height:32px;color:var(--primary)"></i>
+        <span class="deal-card-title">Price</span>
+        <p class="deal-card-body">$0 Upfront. This is a 100% Risk-Free Pilot. You only pay to unlock the full build after you see it work.</p>
+      </div>
+      <div class="deal-card deal-card--yellow">
+        <i data-lucide="zap" style="width:32px;height:32px;color:var(--secondary)"></i>
+        <span class="deal-card-title">Timeline</span>
+        <p class="deal-card-body">14-Day Sprint. We move fast so you can start monetizing immediately.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS ═══ -->
+  <section id="how" class="how fade-in">
+    <span class="section-label">HOW IT WORKS</span>
+    <h2>From scattered content to a billable AI asset.</h2>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num step-num--teal">1</div>
+        <div class="step-content">
+          <span class="step-title">The &ldquo;Deep Ingestion&rdquo; Protocol</span>
+          <p class="step-body">We don&rsquo;t just scrape your website. We connect directly to the raw source of your genius &mdash; YouTube, Vimeo, Google Drive, internal docs, FAQs, SOPs, and archived coaching calls.</p>
         </div>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h3>The "Anti-Chatbot" Promise</h3>
-        <p>This is <strong>not</strong> a generic GPT wrapper that hallucinates. This is a task-execution agent built on your specific "Voice Bible." It doesn't just chat; it writes social content, drafts emails, and answers community questions using <em>your</em> frameworks.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h3>Why would we do all of this work upfront for free?</h3>
-        <p>Because we know you are going to love it, and here's why.</p>
-        <p>Most AI fails because it lacks context. We solve this by plugging directly into your digital brain.</p>
-      </div>
-    </section>
-
-    <section class="section" id="how">
-      <div class="container">
-        <h2>How It Works</h2>
-        <div class="step">
-          <span class="step-number">1</span>
-          <h3>The "Deep Ingestion" Protocol</h3>
-          <p>We don't just scrape your website. We connect directly to the raw source of your genius. We pull historical data from:</p>
-          <ul class="bullet-list">
-            <li><strong>YouTube &amp; Vimeo:</strong> We transcribe and index every video you've ever made.</li>
-            <li><strong>Google Drive:</strong> We read your unfinished SOPs, frameworks, and docs.</li>
-            <li><strong>Internal docs, FAQs, SOPs, archived coaching calls:</strong> We capture your internal team communications and decision-making logic.</li>
-          </ul>
-        </div>
-        <div class="step">
-          <span class="step-number">2</span>
-          <h3>Privacy-First Data Tagging</h3>
-          <p>We work with you to tag all of your data into privacy silos. Private journals, internal documents, paid-for content, public domain data. Our proprietary ingestion engines manage all of your data completely as you want. You have total control over all of it.</p>
-        </div>
-        <div class="step">
-          <span class="step-number">3</span>
-          <h3>"Voice Bible" Extraction</h3>
-          <p>We run your data through our proprietary extraction engine to map your syntax, tone, metaphors, and "personal tells." This ensures the AI passes the "Blind Test" — meaning your own team won't be able to tell if it was written by you or the bot.</p>
-        </div>
-        <div class="step">
-          <span class="step-number">4</span>
-          <h3>Structured "Neural Map"</h3>
-          <p>Our engine organizes your scattered knowledge into a structured "Neural Map." This allows the AI to navigate your entire business knowledge base to answer complex, nuanced questions without hallucinating — turning your static content into a billable asset.</p>
+      <div class="step-card">
+        <div class="step-num step-num--teal">2</div>
+        <div class="step-content">
+          <span class="step-title">Privacy-First Data Tagging</span>
+          <p class="step-body">We work with you to tag all of your data into privacy silos &mdash; private journals, internal documents, paid-for content, public domain data. You have total control over all of it.</p>
         </div>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>Who This Is For</h2>
-        <p>This is <strong>NOT</strong> for beginners. This is exclusively for Founders and High-Ticket Coaches generating 500k–5M annually who have:</p>
-        <ol class="checklist">
-          <li><strong>A Proven High-Ticket Offer:</strong> You already charge premium prices for your time.</li>
-          <li><strong>A Content Library:</strong> You have 3+ years of videos, docs, recorded coaching calls or courses.</li>
-          <li><strong>A Capacity Bottleneck:</strong> You want to serve a broader audience but refuse to trade more hours for dollars.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section scarcity">
-      <div class="container">
-        <h2>We Are Strictly Limited to 7 Pilot Builds Per Month.</h2>
-        <p>This is not an automated software sign-up. We are not just giving you a login and wishing you luck. We are manually engineering a "Neural Map" of your specific intellectual property.</p>
-        <p>Because the output must be perfect, the founders of OughtaBee are personally building your Phase 1 Prototype.</p>
-      </div>
-    </section>
-
-    <section class="section" id="team">
-      <div class="container">
-        <h2>Meet Your Dream Engineering Team</h2>
-        <div class="team-member">
-          <div class="team-headshot"><img src="trevor.jpeg" alt="Trevor Page"></div>
-          <div>
-            <h3>Trevor Page</h3>
-            <p class="team-role">The Architect</p>
-            <p>A "10x Coder" coding for 15+ years and 7-figure entrepreneur himself. Trevor isn't just a developer; he understands your pain because he lived it. He built a 7-figure education business and hit the same "Cognitive Bottleneck" you are facing now. He is currently using this exact system to revive his own flatlined revenues. He thinks like an owner because he <em>is</em> one. Trevor personally codes your prototype to ensure it captures your specific logic.</p>
-          </div>
-        </div>
-        <div class="team-member">
-          <div class="team-headshot"><img src="geordie headshot.jpg" alt="Geordie Wardman"></div>
-          <div>
-            <h3>Geordie Wardman</h3>
-            <p class="team-role">The Strategist</p>
-            <p>An entrepreneur of 20 years with 5 successful company exits in businesses that have generated many millions. Geordie personally oversees your onboarding and data segregation. He ensures your proprietary data is siloed, secure, and optimized for retrieval. He knows exactly how to structure data to increase the enterprise value of an asset.</p>
-          </div>
-        </div>
-        <p>Because Trevor and Geordie effectively become your fractional COO &amp; CTOs during this sprint, we physically cannot onboard more than 7 partners per month without degrading quality.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="guarantee-box">
-          <h2>The "No-Risk" Promise</h2>
-          <p class="guarantee-subtitle">We Take All The Risk. You Just Provide The Data.</p>
-          <p>We know you've been burned by agencies and VAs who promised to "take things off your plate" but just created more work. We've been there too, burned by the best of them!</p>
-          <p>We are reversing that risk entirely.</p>
-          <div class="highlight-box">
-            <h3>The "Blind Test" Guarantee</h3>
-            <p>We will ingest your data and build your Phase 1 Prototype. We then run a "Blind Test" where we put the AI's content next to your own writing.</p>
-            <ul class="bullet-list">
-              <li><strong>The Promise:</strong> If you (or your spouse/team) can distinguish between your writing and the AI's writing more than 30% of the time, you are under no obligation to proceed to Phase 2.</li>
-            </ul>
-          </div>
-          <div class="highlight-box">
-            <h3>The "No-Hostage" Data Promise</h3>
-            <p>If you decide the pilot isn't for you, we delete your model immediately. We do not hold your data hostage.</p>
-          </div>
-          <a href="https://leads.oughtabee.ai/apply" class="cta-button">Apply for Your Prototype Now</a>
-          <p style="text-align:center; margin-top:16px; font-size:14px; color:var(--color-text-light);">Limited to 7 founders per month</p>
+      <div class="step-card">
+        <div class="step-num step-num--teal">3</div>
+        <div class="step-content">
+          <span class="step-title">&ldquo;Voice Bible&rdquo; Extraction</span>
+          <p class="step-body">We run your data through our proprietary extraction engine to map your syntax, tone, metaphors, and &ldquo;personal tells.&rdquo; This ensures the AI passes the &ldquo;Blind Test&rdquo; &mdash; your own team won&rsquo;t be able to tell.</p>
         </div>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>We Don't Just Build The Prototype. We Give You The Blueprint.</h2>
-        <p>Even if you decide <em>not</em> to proceed with us after the pilot, you keep these assets (Value: $6,000+) just for letting us test our tech with your data.</p>
-        <div class="bonus">
-          <span class="bonus-label">Bonus #1</span>
-          <h3>The "Voice Bible" Extraction <span class="bonus-value">(Value: $2,500)</span></h3>
-          <p>Most founders don't know <em>why</em> they sound persuasive; they just are. We run your data through our linguistic processor to decode your unique syntax, metaphors, and tonality.</p>
-          <p><strong>The Benefit:</strong> You get a codified document of your own voice. You can hand this to any future human copywriter or feed it into any LLM to instantly improve output by 50%.</p>
-        </div>
-        <div class="bonus">
-          <span class="bonus-label">Bonus #2</span>
-          <h3>The "Revenue Expansion" Roadmap <span class="bonus-value">(Value: $2,000)</span></h3>
-          <p>We don't just build tech; we build businesses. Based on your current bottleneck, we will map out exactly how to deploy your AI agent to add a new revenue line.</p>
-          <p><strong>The Benefit:</strong> You get a custom schematic showing how to turn this AI into a $49/mo SaaS downsell or a lead-nurture machine that recovers $10k/mo in lost sales.</p>
+      <div class="step-card">
+        <div class="step-num step-num--teal">4</div>
+        <div class="step-content">
+          <span class="step-title">Structured &ldquo;Neural Map&rdquo;</span>
+          <p class="step-body">Our engine organizes your scattered knowledge into a structured &ldquo;Neural Map&rdquo; &mdash; allowing the AI to navigate your entire business knowledge base to answer complex, nuanced questions without hallucinating.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <hr class="divider">
-
-    <section class="section ps-section">
-      <div class="container">
-        <p><strong>P.S. What Happens Next? (The "Dream Team" Access)</strong><br>Here is the deal: The Pilot is designed to prove we can clone your brain. But that is just the engine. Phase 2 is building the car.</p>
-        <p>If (and only if) you are blown away by your Phase 1 Prototype, you unlock the ability to retain The OughtaBee Dream Team (Trevor &amp; Geordie) for Phase 2.</p>
-        <p>We will work with you to scope a Custom Cognitive Bottleneck Expansion — a dedicated revenue line built on top of your new AI brain.</p>
-        <ul class="bullet-list">
-          <li><strong>Full Creative Access:</strong> You get direct access to Trevor (Tech Architect) and Geordie (Strategy) to design the exact solution you've always visualized but couldn't code.</li>
-          <li><strong>Mutually Agreed Pricing:</strong> We don't have a rigid rate card for Phase 2. We scope the dream solution together, determine the ROI, and agree on a one-time build fee that makes sense for both of us.</li>
-        </ul>
-        <p><strong>You dream it. We build it. You own it.</strong></p>
+  <!-- ═══ WHO THIS IS FOR (DARK) ═══ -->
+  <section class="who">
+    <span class="section-label section-label--yellow fade-in">IS THIS YOU?</span>
+    <h2 class="fade-in">This is NOT for beginners.</h2>
+    <p class="who-sub fade-in">This is exclusively for Founders and High-Ticket Coaches generating 500k&ndash;5M annually who have:</p>
+    <div class="who-checks fade-in">
+      <div class="check-row">
+        <div class="check-icon"><i data-lucide="check" style="width:16px;height:16px;color:#fff"></i></div>
+        <p class="check-text">A Proven High-Ticket Offer &mdash; You already charge premium prices for your time.</p>
       </div>
-    </section>
-
-    <section class="section cta-box" id="apply">
-      <div class="container">
-        <h2>Ready to Clone Your Brain?</h2>
-        <p>Apply now to secure one of our 7 monthly pilot spots. We'll build your Phase 1 Prototype in 14 days — completely free.</p>
-        <a href="https://leads.oughtabee.ai/apply" class="cta-button">APPLY FOR PILOT NOW</a>
+      <div class="check-row">
+        <div class="check-icon"><i data-lucide="check" style="width:16px;height:16px;color:#fff"></i></div>
+        <p class="check-text">A Content Library &mdash; You have 3+ years of videos, docs, recorded coaching calls or courses.</p>
       </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <p><strong>Crafty Codr</strong></p>
-        <p><a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a> · <a href="https://oughtabee.ai">oughtabee.ai</a></p>
-        <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
-        <p>151 Lyndhurst Drive, Kitchener, Ontario N2B 1B7 Canada</p>
-        <p>SMS consent is not a condition of purchase.</p>
+      <div class="check-row">
+        <div class="check-icon"><i data-lucide="check" style="width:16px;height:16px;color:#fff"></i></div>
+        <p class="check-text">A Capacity Bottleneck &mdash; You want to serve a broader audience but refuse to trade more hours for dollars.</p>
       </div>
-    </footer>
-  </main>
+    </div>
+  </section>
+
+  <!-- ═══ TEAM ═══ -->
+  <section id="team" class="team fade-in">
+    <span class="section-label">YOUR TEAM</span>
+    <h2>Meet Your Dream Engineering Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="public/trevor.jpeg" alt="Trevor Page" class="team-photo">
+        <span class="team-role team-role--teal">The Architect</span>
+        <span class="team-name">Trevor Page</span>
+        <p class="team-bio">A &ldquo;10x Coder&rdquo; coding for 15+ years and 7-figure entrepreneur himself. Trevor built a 7-figure education business and hit the same &ldquo;Cognitive Bottleneck&rdquo; you are facing now. He thinks like an owner because he is one. Trevor personally codes your prototype to ensure it captures your specific logic.</p>
+      </div>
+      <div class="team-card">
+        <img src="public/geordie-headshot.jpg" alt="Geordie Wardman" class="team-photo">
+        <span class="team-role team-role--yellow">The Strategist</span>
+        <span class="team-name">Geordie Wardman</span>
+        <p class="team-bio">An entrepreneur of 20 years with 5 successful company exits generating many millions. Geordie personally oversees your onboarding and data segregation. He ensures your proprietary data is siloed, secure, and optimized for retrieval. He knows exactly how to structure data to increase enterprise value.</p>
+      </div>
+    </div>
+    <p class="team-close">Because Trevor and Geordie effectively become your fractional COO &amp; CTOs during this sprint, we physically cannot onboard more than 7 partners per month without degrading quality.</p>
+  </section>
+
+  <!-- ═══ GUARANTEES ═══ -->
+  <section class="guarantees fade-in">
+    <span class="section-label section-label--gold">ZERO RISK</span>
+    <h2>The &ldquo;No-Risk&rdquo; Promise</h2>
+    <p class="guarantees-sub">We Take All The Risk. You Just Provide The Data.</p>
+    <div class="guar-cards">
+      <div class="guar-card guar-card--teal">
+        <i data-lucide="shield-check" style="width:32px;height:32px;color:var(--primary)"></i>
+        <span class="guar-card-title">The &ldquo;Blind Test&rdquo; Guarantee</span>
+        <p class="guar-card-body">We put the AI&rsquo;s content next to your own writing. If you or your team can distinguish between your writing and the AI&rsquo;s more than 30% of the time, you are under no obligation to proceed to Phase 2.</p>
+      </div>
+      <div class="guar-card guar-card--yellow">
+        <i data-lucide="lock" style="width:32px;height:32px;color:var(--secondary)"></i>
+        <span class="guar-card-title">The &ldquo;No-Hostage&rdquo; Data Promise</span>
+        <p class="guar-card-body">If you decide the pilot isn&rsquo;t for you, we delete your model immediately. We do not hold your data hostage. Your intellectual property stays yours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BONUSES ═══ -->
+  <section class="bonuses fade-in">
+    <span class="section-label">BONUSES</span>
+    <h2>We Don&rsquo;t Just Build The Prototype. We Give You The Blueprint.</h2>
+    <p class="bonuses-sub">Even if you decide not to proceed after the pilot, you keep these assets (Value: $6,000+) just for letting us test our tech with your data.</p>
+    <div class="bonus-cards">
+      <div class="bonus-card bonus-card--teal">
+        <span class="bonus-val bonus-val--teal">Value: $2,500</span>
+        <span class="bonus-title">The &ldquo;Voice Bible&rdquo; Extraction</span>
+        <p class="bonus-body">We decode your unique syntax, metaphors, and tonality into a codified document. Hand this to any future copywriter or feed it into any LLM to instantly improve output by 50%.</p>
+      </div>
+      <div class="bonus-card bonus-card--yellow">
+        <span class="bonus-val bonus-val--yellow">Value: $2,000</span>
+        <span class="bonus-title">The &ldquo;Revenue Expansion&rdquo; Roadmap</span>
+        <p class="bonus-body">A custom schematic showing how to turn your AI into a $49/mo SaaS downsell or a lead-nurture machine that recovers $10k/mo in lost sales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA (DARK) ═══ -->
+  <section class="final-cta">
+    <h2 class="fade-in">Ready to Clone Your Brain?</h2>
+    <p class="final-cta-sub fade-in">Apply now to secure one of our 7 monthly pilot spots. We&rsquo;ll build your Phase 1 Prototype in 14 days &mdash; completely free.</p>
+    <a href="https://leads.oughtabee.ai/apply" class="btn-primary btn-primary--lg fade-in">APPLY FOR PILOT NOW <span>&rarr;</span></a>
+    <span class="final-cta-note fade-in">Limited to 7 founders per month</span>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="public/logo-dark.webp" alt="OughtaBee AI" class="footer-logo-icon">
+        <span>OughtaBee AI</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2025 Crafty Codr Inc. All rights reserved.</span>
+      <span class="footer-copy">151 Lyndhurst Drive, Kitchener, Ontario N2B 1B7 Canada</span>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
