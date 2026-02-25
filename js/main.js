@@ -154,9 +154,16 @@ class Bee {
     // Rotate sector each cycle so the same bee doesn't always go the same direction
     const sector = (this.index + this.cycleCount) % 5;
     this.cycleCount++;
-    const target = pickSectorTarget(r.width, r.height, 0, sector, 5);
-    this.targetX = target.x;
-    this.targetY = target.y;
+    // Expand virtual flight area: extend left (over content) and right (off-screen)
+    const expandLeft = 160;
+    const expandRight = 200;
+    const expandVert = 60;
+    const virtualW = r.width + expandLeft + expandRight;
+    const virtualH = r.height + expandVert * 2;
+    const target = pickSectorTarget(virtualW, virtualH, 0, sector, 5);
+    // Shift target back: virtual center was offset by expandLeft
+    this.targetX = target.x - expandLeft;
+    this.targetY = target.y - expandVert;
 
     // Generate curved bezier control points (perpendicular offset for arc)
     const dx = this.targetX - center.x;
@@ -365,7 +372,7 @@ class BeeSwarm {
     // Build SVG layer for trails
     this.trailSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     this.trailSvg.setAttribute('class', 'bee-trail');
-    this.trailSvg.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;';
+    this.trailSvg.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible;';
     this.container.appendChild(this.trailSvg);
 
     this.visibilityObserver = new IntersectionObserver((entries) => {
@@ -391,7 +398,7 @@ class BeeSwarm {
       <div class="hive-ring"></div>
       <div class="hive-ring"></div>
       <div class="hive-ring"></div>
-      <img class="hive-nest" src="public/nest.png" alt="" draggable="false">
+      <img class="hive-nest" src="public/nest2.png" alt="" draggable="false">
     `;
     this.container.appendChild(this.hubEl);
   }
