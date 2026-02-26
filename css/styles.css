@@ -187,6 +187,8 @@ body {
   padding: 14px 24px;
   background: var(--text);
   animation: urgencyGlow 3s ease-in-out infinite;
+  position: relative;
+  z-index: 10;
 }
 @keyframes urgencyGlow {
   0%,
@@ -227,7 +229,7 @@ body {
 .hero {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 60px 64px;
+  padding: 56px 60px 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
