@@ -89,8 +89,8 @@ body {
   transform: translateY(0);
 }
 .btn-primary--sm {
-  padding: 10px 24px;
-  font-size: 14px;
+  padding: 12px 28px;
+  font-size: 15px;
 }
 .btn-primary--lg {
   padding: 20px 48px;
@@ -121,7 +121,7 @@ body {
 
 /* ── Header ── */
 .header {
-  padding: 12px 80px;
+  padding: 20px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,26 +134,26 @@ body {
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   text-decoration: none;
 }
 .header-logo-icon {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
 }
 .header-logo-text {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text);
 }
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 36px;
 }
 .header-nav a {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--text-secondary);
   text-decoration: none;
@@ -184,7 +184,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 10px 24px;
+  padding: 14px 24px;
   background: var(--text);
   animation: urgencyGlow 3s ease-in-out infinite;
 }
@@ -227,7 +227,7 @@ body {
 .hero {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 56px 60px 48px;
+  padding: 48px 60px 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,7 +242,7 @@ body {
   color: var(--text);
   letter-spacing: -0.025em;
   text-align: center;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 .hero-h1-accent {
   color: var(--primary);
@@ -266,7 +266,7 @@ body {
   color: var(--text-secondary);
   max-width: 600px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 
 /* ── Hero CTA Row ── */
@@ -286,7 +286,7 @@ body {
 .hero-animation {
   position: relative;
   width: 100%;
-  height: 380px;
+  height: 420px;
   margin: -10px 0 -10px;
   overflow: visible;
 }
