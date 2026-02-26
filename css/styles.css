@@ -89,8 +89,8 @@ body {
   transform: translateY(0);
 }
 .btn-primary--sm {
-  padding: 12px 28px;
-  font-size: 15px;
+  padding: 10px 24px;
+  font-size: 14px;
 }
 .btn-primary--lg {
   padding: 20px 48px;
@@ -121,7 +121,7 @@ body {
 
 /* ── Header ── */
 .header {
-  padding: 20px 80px;
+  padding: 12px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,26 +134,26 @@ body {
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   text-decoration: none;
 }
 .header-logo-icon {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
 }
 .header-logo-text {
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--text);
 }
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 32px;
 }
 .header-nav a {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--text-secondary);
   text-decoration: none;
