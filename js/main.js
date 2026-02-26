@@ -154,17 +154,19 @@ class Bee {
     // Rotate sector each cycle so the same bee doesn't always go the same direction
     const sector = (this.index + this.cycleCount) % 5;
     this.cycleCount++;
-    // Expand wide horizontally (bees fly off-screen on both sides)
-    // Shrink vertical so bees stay within animation area, not overlapping text
-    const expandH = 400;
-    const vertShrink = r.height * 0.35;
+    // Flight zone: full viewport width + extends above animation container
+    // but stops at the urgency banner. Does NOT extend below (desc/CTA stay clear).
+    const expandH = 500;
+    const banner = document.querySelector('.urgency-banner');
+    const bannerBottom = banner ? banner.getBoundingClientRect().bottom : 0;
+    const expandUp = Math.max(0, r.top - bannerBottom - 100); // 100px margin: 50px tooltip + 44px bee + buffer
     const virtualW = r.width + expandH * 2;
-    const virtualH = r.height - vertShrink;
+    const virtualH = r.height + expandUp;
     const target = pickSectorTarget(virtualW, virtualH, 0, sector, 5);
     this.targetX = target.x - expandH;
-    this.targetY = target.y + vertShrink / 2;
-    // Clamp vertical to stay within container bounds (prevent bezier overshoot)
-    this.targetY = Math.max(40, Math.min(r.height - 40, this.targetY));
+    this.targetY = target.y - expandUp;
+    // Clamp: don't go above banner, don't go below container
+    this.targetY = Math.max(-(expandUp), Math.min(r.height - 50, this.targetY));
 
     // Generate curved bezier control points (perpendicular offset for arc)
     const dx = this.targetX - center.x;
@@ -172,16 +174,17 @@ class Bee {
     const dist = Math.sqrt(dx * dx + dy * dy);
     const nx = -dy / dist; // perpendicular normal
     const ny = dx / dist;
-    const curve = (Math.random() - 0.5) * dist * 0.35; // gentler curvature to stay in bounds
+    const curve = (Math.random() - 0.5) * dist * 0.4;
 
     this.cp1x = center.x + dx * 0.3 + nx * curve;
     this.cp1y = center.y + dy * 0.3 + ny * curve;
     this.cp2x = center.x + dx * 0.7 + nx * curve * 0.5;
     this.cp2y = center.y + dy * 0.7 + ny * curve * 0.5;
-    // Clamp control point Y to keep bezier arcs within the container
+    // Clamp bezier arcs: don't arc above banner or below into desc/CTA
     const r2 = this.container.getBoundingClientRect();
-    this.cp1y = Math.max(20, Math.min(r2.height - 20, this.cp1y));
-    this.cp2y = Math.max(20, Math.min(r2.height - 20, this.cp2y));
+    const minY = -(expandUp);
+    this.cp1y = Math.max(minY, Math.min(r2.height - 20, this.cp1y));
+    this.cp2y = Math.max(minY, Math.min(r2.height - 20, this.cp2y));
 
     this.currentTask = BEE_TASKS[Math.floor(Math.random() * BEE_TASKS.length)];
     this.tooltipEl.textContent = this.currentTask;
