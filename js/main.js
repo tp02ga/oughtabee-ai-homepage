@@ -73,8 +73,8 @@ function pickSectorTarget(w, h, margin, sector, totalSectors) {
   const tTop = sinA < 0 ? (-cy) / sinA : Infinity;
 
   const tEdge = Math.min(tRight, tLeft, tBottom, tTop);
-  // Fly 85–110% of the way to edge (can go past the visible boundary)
-  const dist = tEdge * (0.85 + Math.random() * 0.25);
+  // Fly 70–95% of the way to edge (stay within container)
+  const dist = tEdge * (0.70 + Math.random() * 0.25);
 
   return { x: cx + cosA * dist, y: cy + sinA * dist };
 }
@@ -154,16 +154,32 @@ class Bee {
     // Rotate sector each cycle so the same bee doesn't always go the same direction
     const sector = (this.index + this.cycleCount) % 5;
     this.cycleCount++;
-    // Expand virtual flight area: extend left (over content) and right (off-screen)
-    const expandLeft = 80;
-    const expandRight = 80;
-    const expandVert = 40;
-    const virtualW = r.width + expandLeft + expandRight;
-    const virtualH = r.height + expandVert * 2;
-    const target = pickSectorTarget(virtualW, virtualH, 0, sector, 5);
-    // Shift target back: virtual center was offset by expandLeft
-    this.targetX = target.x - expandLeft;
-    this.targetY = target.y - expandVert;
+    // Bees fly left and right of hero only — stay within container bounds
+    const margin = 30; // keep bees slightly inset from edges
+    const target = pickSectorTarget(r.width, r.height, 0, sector, 5);
+    this.targetX = target.x;
+    this.targetY = target.y;
+    // Clamp to container bounds so bees never fly off-screen or above hero
+    this.targetX = Math.max(margin, Math.min(r.width - margin, this.targetX));
+    this.targetY = Math.max(margin, Math.min(r.height - 50, this.targetY));
+
+    // Exclusion zone: no flying from 10 o'clock to 2 o'clock (above hub / subtitle)
+    // In atan2 screen coords: 10 o'clock ≈ -5π/6, 2 o'clock ≈ -π/6
+    const dx2 = this.targetX - center.x;
+    const dy2 = this.targetY - center.y;
+    const angle = Math.atan2(dy2, dx2);
+    const CLOCK2 = -Math.PI / 6;   // 2 o'clock boundary
+    const CLOCK10 = -5 * Math.PI / 6; // 10 o'clock boundary
+    if (angle < CLOCK2 && angle > CLOCK10) {
+      // Deflect to nearest allowed edge (2 o'clock or 10 o'clock)
+      const distFromHub = Math.sqrt(dx2 * dx2 + dy2 * dy2);
+      const deflectAngle = (angle > -Math.PI / 2) ? CLOCK2 : CLOCK10;
+      this.targetX = center.x + Math.cos(deflectAngle) * distFromHub;
+      this.targetY = center.y + Math.sin(deflectAngle) * distFromHub;
+      // Re-clamp after deflection
+      this.targetX = Math.max(margin, Math.min(r.width - margin, this.targetX));
+      this.targetY = Math.max(margin, Math.min(r.height - 50, this.targetY));
+    }
 
     // Generate curved bezier control points (perpendicular offset for arc)
     const dx = this.targetX - center.x;
@@ -171,12 +187,17 @@ class Bee {
     const dist = Math.sqrt(dx * dx + dy * dy);
     const nx = -dy / dist; // perpendicular normal
     const ny = dx / dist;
-    const curve = (Math.random() - 0.5) * dist * 0.6; // random curvature
+    const curve = (Math.random() - 0.5) * dist * 0.4;
 
     this.cp1x = center.x + dx * 0.3 + nx * curve;
     this.cp1y = center.y + dy * 0.3 + ny * curve;
     this.cp2x = center.x + dx * 0.7 + nx * curve * 0.5;
     this.cp2y = center.y + dy * 0.7 + ny * curve * 0.5;
+    // Clamp control points within container so curves don't go off-screen
+    this.cp1x = Math.max(0, Math.min(r.width, this.cp1x));
+    this.cp1y = Math.max(0, Math.min(r.height - 20, this.cp1y));
+    this.cp2x = Math.max(0, Math.min(r.width, this.cp2x));
+    this.cp2y = Math.max(0, Math.min(r.height - 20, this.cp2y));
 
     this.currentTask = BEE_TASKS[Math.floor(Math.random() * BEE_TASKS.length)];
     this.tooltipEl.textContent = this.currentTask;
@@ -206,10 +227,11 @@ class Bee {
     const ny = dx / dist;
     const curve = (Math.random() - 0.5) * dist * 0.5;
 
-    this.rcp1x = this.targetX + dx * 0.3 + nx * curve;
-    this.rcp1y = this.targetY + dy * 0.3 + ny * curve;
-    this.rcp2x = this.targetX + dx * 0.7 + nx * curve * 0.4;
-    this.rcp2y = this.targetY + dy * 0.7 + ny * curve * 0.4;
+    const r = this.container.getBoundingClientRect();
+    this.rcp1x = Math.max(0, Math.min(r.width, this.targetX + dx * 0.3 + nx * curve));
+    this.rcp1y = Math.max(0, Math.min(r.height, this.targetY + dy * 0.3 + ny * curve));
+    this.rcp2x = Math.max(0, Math.min(r.width, this.targetX + dx * 0.7 + nx * curve * 0.4));
+    this.rcp2y = Math.max(0, Math.min(r.height, this.targetY + dy * 0.7 + ny * curve * 0.4));
 
     this.flightDuration = 1600 + Math.random() * 800;
     this.state = STATES.RETURNING;
