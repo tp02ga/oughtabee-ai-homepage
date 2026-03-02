@@ -10,378 +10,355 @@
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="public/favicon.png">
   <title>Terms &amp; Conditions — OughtaBee AI</title>
-  <style>
-    :root {
-      --color-bg: #ffffff;
-      --color-text: #333333;
-      --color-text-light: #666666;
-      --color-heading: #222222;
-      --color-red: #c02b0a;
-      --color-red-hover: #a02208;
-      --color-border-light: #e8e8e8;
-      --font-serif: Georgia, 'Times New Roman', serif;
-      --font-sans: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-      --max-width: 720px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: var(--font-sans);
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--color-text);
-      background: var(--color-bg);
-      -webkit-font-smoothing: antialiased;
-    }
-    .header {
-      border-bottom: 1px solid var(--color-border-light);
-      padding: 14px 24px;
-      background: #fafafa;
-    }
-    .header-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-family: var(--font-serif);
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--color-heading);
-      text-decoration: none;
-    }
-    .logo span { color: var(--color-red); }
-    .header-nav a {
-      font-size: 13px;
-      color: var(--color-text-light);
-      text-decoration: none;
-      margin-left: 20px;
-    }
-    .header-nav a:hover { color: var(--color-red); }
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .legal-content { padding: 40px 0 60px; }
-    h2 {
-      font-family: var(--font-serif);
-      font-size: 30px;
-      line-height: 1.3;
-      color: var(--color-heading);
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-    h3 {
-      font-family: var(--font-serif);
-      font-size: 22px;
-      line-height: 1.35;
-      color: var(--color-heading);
-      font-weight: normal;
-      margin-bottom: 16px;
-      margin-top: 28px;
-    }
-    h4 {
-      font-family: var(--font-sans);
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--color-heading);
-      margin-bottom: 10px;
-      margin-top: 20px;
-    }
-    p { margin-bottom: 16px; }
-    a { color: var(--color-red); text-decoration: underline; }
-    a:hover { color: var(--color-red-hover); }
-    ul { margin: 16px 0; padding-left: 24px; }
-    li { margin-bottom: 8px; }
-    .footer {
-      text-align: center;
-      padding: 40px 0;
-      border-top: 1px solid var(--color-border-light);
-      font-size: 13px;
-      color: var(--color-text-light);
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/legal.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFTSR72P"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ═══ HEADER ═══ -->
   <header class="header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">Oughta <span>Bee</span> AI</a>
-      <nav class="header-nav">
-        <a href="index.html#how">How It Works</a>
-        <a href="index.html#team">About Us</a>
-        <a href="https://leads.oughtabee.ai/apply">Apply Now</a>
-        <a href="https://blog.oughtabee.ai/">Blog</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms &amp; Conditions</a>
-      </nav>
-    </div>
+    <a href="index.html" class="header-logo">
+      <img src="public/logo.webp" alt="OughtaBee AI" class="header-logo-icon">
+      <span class="header-logo-text">OughtaBee AI</span>
+    </a>
+    <button class="mobile-toggle" aria-label="Menu">
+      <i data-lucide="menu" style="width:24px;height:24px"></i>
+    </button>
+    <nav class="header-nav">
+      <a href="index.html#how">How It Works</a>
+      <a href="index.html#team">About Us</a>
+      <a href="https://blog.oughtabee.ai/">Blog</a>
+      <a href="https://leads.oughtabee.ai/apply" class="btn-primary btn-primary--sm">Apply Now <span>&rarr;</span></a>
+    </nav>
   </header>
 
-  <main class="container legal-content">
-    <h2>Terms and Conditions</h2>
-    <p><strong>Crafty Codr Inc. for website oughtabee.ai</strong></p>
+  <!-- ═══ LEGAL CONTENT ═══ -->
+  <main class="legal">
+    <div class="legal-header">
+      <span class="section-label">LEGAL</span>
+      <h1>Terms and Conditions</h1>
+      <p class="legal-meta">Crafty Codr Inc. for website oughtabee.ai &middot; Last Updated: December 2, 2025</p>
+    </div>
 
-    <h3>1. Acceptance of Terms</h3>
-    <p>By accessing this website, scheduling a discovery call, or engaging Crafty Codr Inc. ("Consultant," "we," "us," or "our") for services, you ("Client," "you," or "your") agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services or website.</p>
+    <div class="legal-body">
+      <section>
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing this website, scheduling a discovery call, or engaging Crafty Codr Inc. ("Consultant," "we," "us," or "our") for services, you ("Client," "you," or "your") agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services or website.</p>
+      </section>
 
-    <h3>2. Services Overview</h3>
-    <h4>2.1 Service Structure</h4>
-    <p>Crafty Codr Inc. provides custom AI application development services structured in two phases:</p>
-    <p><strong>Phase 1: ROI Discovery &amp; Scoping Package</strong></p>
-    <ul>
-      <li>Initial 30-minute ROI Discovery Call (complimentary)</li>
-      <li>Optional AI Scoping Package engagement (separate agreement required)</li>
-      <li>Deliverables include Requirements Brief, Application Mockup, and Development Proposal</li>
-    </ul>
-    <p><strong>Phase 2: Custom Build Engagement</strong></p>
-    <ul>
-      <li>Full development of custom AI systems, including Knowledge Databases and workflow automation</li>
-      <li>Requires separate Development Engagement Agreement</li>
-      <li>Milestone-based delivery with transparent progress tracking</li>
-    </ul>
-    <h4>2.2 Service Availability</h4>
-    <p>Services are subject to availability and acceptance by Crafty Codr Inc. We reserve the right to decline any engagement that we determine does not align with our capabilities, values, or business objectives.</p>
+      <section>
+        <h2>2. Services Overview</h2>
+        <h3>2.1 Service Structure</h3>
+        <p>Crafty Codr Inc. provides custom AI application development services structured in two phases:</p>
+        <p><strong>Phase 1: ROI Discovery &amp; Scoping Package</strong></p>
+        <ul>
+          <li>Initial 30-minute ROI Discovery Call (complimentary)</li>
+          <li>Optional AI Scoping Package engagement (separate agreement required)</li>
+          <li>Deliverables include Requirements Brief, Application Mockup, and Development Proposal</li>
+        </ul>
+        <p><strong>Phase 2: Custom Build Engagement</strong></p>
+        <ul>
+          <li>Full development of custom AI systems, including Knowledge Databases and workflow automation</li>
+          <li>Requires separate Development Engagement Agreement</li>
+          <li>Milestone-based delivery with transparent progress tracking</li>
+        </ul>
+        <h3>2.2 Service Availability</h3>
+        <p>Services are subject to availability and acceptance by Crafty Codr Inc. We reserve the right to decline any engagement that we determine does not align with our capabilities, values, or business objectives.</p>
+      </section>
 
-    <h3>3. ROI Discovery Call</h3>
-    <h4>3.1 Complimentary Consultation</h4>
-    <p>The initial 30-minute ROI Discovery Call is provided at no cost and without obligation. This call is intended to identify potential AI opportunities in your business and assess mutual fit.</p>
-    <h4>3.2 No Guarantee of Engagement</h4>
-    <p>Participation in a Discovery Call does not guarantee acceptance into the Scoping Package or Custom Build phases. We evaluate each potential engagement based on feasibility, fit, and expected ROI.</p>
+      <section>
+        <h2>3. ROI Discovery Call</h2>
+        <h3>3.1 Complimentary Consultation</h3>
+        <p>The initial 30-minute ROI Discovery Call is provided at no cost and without obligation. This call is intended to identify potential AI opportunities in your business and assess mutual fit.</p>
+        <h3>3.2 No Guarantee of Engagement</h3>
+        <p>Participation in a Discovery Call does not guarantee acceptance into the Scoping Package or Custom Build phases. We evaluate each potential engagement based on feasibility, fit, and expected ROI.</p>
+      </section>
 
-    <h3>4. Scoping Package Engagement</h3>
-    <h4>4.1 Separate Agreement Required</h4>
-    <p>The AI Scoping Package requires execution of a separate Scoping Engagement Agreement, which includes specific terms, deliverables, timeline, and payment terms.</p>
-    <h4>4.2 Standard Scoping Fee</h4>
-    <p>The standard fee for the AI Scoping Package is dependent on the size of the engagement. It can vary between $2,000 - $5,000 USD, payable in full upon signing the Scoping Engagement Agreement.</p>
-    <h4>4.3 Credit Toward Full Build</h4>
-    <p>The Scoping Package fee will be credited toward any subsequent full build engagement entered into within ninety (90) days of delivery of the Scoping Package deliverables.</p>
-    <h4>4.4 Scoping Deliverables</h4>
-    <p>Scoping Package deliverables typically include:</p>
-    <ul>
-      <li>Requirements Brief outlining detailed requirements for each focus area</li>
-      <li>Application Mockup (visual representation, not a working build)</li>
-      <li>Development Proposal with pricing options and timeline estimates</li>
-    </ul>
-    <h4>4.5 Timeline</h4>
-    <p>The Scoping Package is typically delivered within approximately 2-3 weeks from the effective date, subject to timely input and participation from Client.</p>
-    <h4>4.6 No Obligation to Proceed</h4>
-    <p>Completion of the Scoping Package does not obligate either party to proceed with a full build engagement. The Client retains full discretion to accept or decline the Development Proposal.</p>
+      <section>
+        <h2>4. Scoping Package Engagement</h2>
+        <h3>4.1 Separate Agreement Required</h3>
+        <p>The AI Scoping Package requires execution of a separate Scoping Engagement Agreement, which includes specific terms, deliverables, timeline, and payment terms.</p>
+        <h3>4.2 Standard Scoping Fee</h3>
+        <p>The standard fee for the AI Scoping Package is dependent on the size of the engagement. It can vary between $2,000 - $5,000 USD, payable in full upon signing the Scoping Engagement Agreement.</p>
+        <h3>4.3 Credit Toward Full Build</h3>
+        <p>The Scoping Package fee will be credited toward any subsequent full build engagement entered into within ninety (90) days of delivery of the Scoping Package deliverables.</p>
+        <h3>4.4 Scoping Deliverables</h3>
+        <p>Scoping Package deliverables typically include:</p>
+        <ul>
+          <li>Requirements Brief outlining detailed requirements for each focus area</li>
+          <li>Application Mockup (visual representation, not a working build)</li>
+          <li>Development Proposal with pricing options and timeline estimates</li>
+        </ul>
+        <h3>4.5 Timeline</h3>
+        <p>The Scoping Package is typically delivered within approximately 2-3 weeks from the effective date, subject to timely input and participation from Client.</p>
+        <h3>4.6 No Obligation to Proceed</h3>
+        <p>Completion of the Scoping Package does not obligate either party to proceed with a full build engagement. The Client retains full discretion to accept or decline the Development Proposal.</p>
+      </section>
 
-    <h3>5. Custom Build Engagement</h3>
-    <h4>5.1 Separate Development Agreement</h4>
-    <p>All custom build projects require execution of a separate Development Engagement Agreement detailing scope, deliverables, timeline, payment terms, and other project-specific conditions.</p>
-    <h4>5.2 Pricing Structure</h4>
-    <p>OughtaBee AI delivers all solutions within a predefined implementation and pricing framework. During the Scoping Phase, each engagement is classified into a fixed implementation class based on workflow complexity, knowledge depth, and system scope.</p>
-    <p>This classification determines the total implementation investment and delivery boundaries before any build begins.</p>
-    <p>We do not offer hourly billing, open-ended development, or undefined AI experimentation. This approach ensures predictable delivery, protected quality, and alignment between scope, effort, and outcomes.</p>
-    <p>Any expansion of scope beyond the defined implementation class requires a re-scoping and may result in reclassification to a different implementation class and associated investment.</p>
-    <h4>5.3 Payment Options</h4>
-    <p>Payment options for custom builds may include:</p>
-    <ul>
-      <li>One-time upfront payment (with discount applied)</li>
-      <li>Monthly installment plans (9 or 24 payments)</li>
-    </ul>
-    <p>Specific payment terms will be outlined in the Development Engagement Agreement.</p>
-    <h4>5.4 Timeline Estimates</h4>
-    <p>Development timelines typically range from 30 to 90 days depending on project scope and complexity. Specific timelines will be provided in the Development Proposal and formalized in the Development Engagement Agreement.</p>
+      <section>
+        <h2>5. Custom Build Engagement</h2>
+        <h3>5.1 Separate Development Agreement</h3>
+        <p>All custom build projects require execution of a separate Development Engagement Agreement detailing scope, deliverables, timeline, payment terms, and other project-specific conditions.</p>
+        <h3>5.2 Pricing Structure</h3>
+        <p>OughtaBee AI delivers all solutions within a predefined implementation and pricing framework. During the Scoping Phase, each engagement is classified into a fixed implementation class based on workflow complexity, knowledge depth, and system scope.</p>
+        <p>This classification determines the total implementation investment and delivery boundaries before any build begins.</p>
+        <p>We do not offer hourly billing, open-ended development, or undefined AI experimentation. This approach ensures predictable delivery, protected quality, and alignment between scope, effort, and outcomes.</p>
+        <p>Any expansion of scope beyond the defined implementation class requires a re-scoping and may result in reclassification to a different implementation class and associated investment.</p>
+        <h3>5.3 Payment Options</h3>
+        <p>Payment options for custom builds may include:</p>
+        <ul>
+          <li>One-time upfront payment (with discount applied)</li>
+          <li>Monthly installment plans (9 or 24 payments)</li>
+        </ul>
+        <p>Specific payment terms will be outlined in the Development Engagement Agreement.</p>
+        <h3>5.4 Timeline Estimates</h3>
+        <p>Development timelines typically range from 30 to 90 days depending on project scope and complexity. Specific timelines will be provided in the Development Proposal and formalized in the Development Engagement Agreement.</p>
+      </section>
 
-    <h3>6. Intellectual Property</h3>
-    <h4>6.1 Client Data and Knowledge</h4>
-    <p>Client retains all ownership rights to proprietary data, knowledge, documents, and other materials shared with Consultant during any engagement.</p>
-    <h4>6.2 Consultant Pre-Existing IP</h4>
-    <p>Consultant retains ownership of all pre-existing intellectual property, tools, methods, frameworks, and techniques used in service delivery.</p>
-    <h4>6.3 Custom Deliverables</h4>
-    <p>Ownership of custom deliverables, including developed AI systems, Knowledge Databases, and applications, will be specified in the applicable Development Engagement Agreement. Generally, Client receives full ownership of custom-built systems upon completion and final payment.</p>
-    <h4>6.4 Scoping Phase Materials</h4>
-    <p>Deliverables produced during the Scoping Package phase (Requirements Brief, Application Mockup, Development Proposal) are provided for Client's internal evaluation purposes only, unless otherwise specified in a subsequent Development Engagement Agreement.</p>
+      <section>
+        <h2>6. Intellectual Property</h2>
+        <h3>6.1 Client Data and Knowledge</h3>
+        <p>Client retains all ownership rights to proprietary data, knowledge, documents, and other materials shared with Consultant during any engagement.</p>
+        <h3>6.2 Consultant Pre-Existing IP</h3>
+        <p>Consultant retains ownership of all pre-existing intellectual property, tools, methods, frameworks, and techniques used in service delivery.</p>
+        <h3>6.3 Custom Deliverables</h3>
+        <p>Ownership of custom deliverables, including developed AI systems, Knowledge Databases, and applications, will be specified in the applicable Development Engagement Agreement. Generally, Client receives full ownership of custom-built systems upon completion and final payment.</p>
+        <h3>6.4 Scoping Phase Materials</h3>
+        <p>Deliverables produced during the Scoping Package phase (Requirements Brief, Application Mockup, Development Proposal) are provided for Client's internal evaluation purposes only, unless otherwise specified in a subsequent Development Engagement Agreement.</p>
+      </section>
 
-    <h3>7. Confidentiality</h3>
-    <h4>7.1 Mutual Confidentiality</h4>
-    <p>Both parties agree to maintain confidentiality of each other's proprietary or sensitive information and not to disclose such information to third parties without prior written consent.</p>
-    <h4>7.2 Exclusions</h4>
-    <p>Confidentiality obligations do not apply to information that:</p>
-    <ul>
-      <li>Is or becomes publicly available through no breach of this agreement</li>
-      <li>Was rightfully in the receiving party's possession prior to disclosure</li>
-      <li>Is independently developed without use of confidential information</li>
-      <li>Is required to be disclosed by law or court order</li>
-    </ul>
-    <h4>7.3 Duration</h4>
-    <p>Confidentiality obligations survive termination of any engagement and continue indefinitely unless otherwise specified in writing.</p>
+      <section>
+        <h2>7. Confidentiality</h2>
+        <h3>7.1 Mutual Confidentiality</h3>
+        <p>Both parties agree to maintain confidentiality of each other's proprietary or sensitive information and not to disclose such information to third parties without prior written consent.</p>
+        <h3>7.2 Exclusions</h3>
+        <p>Confidentiality obligations do not apply to information that:</p>
+        <ul>
+          <li>Is or becomes publicly available through no breach of this agreement</li>
+          <li>Was rightfully in the receiving party's possession prior to disclosure</li>
+          <li>Is independently developed without use of confidential information</li>
+          <li>Is required to be disclosed by law or court order</li>
+        </ul>
+        <h3>7.3 Duration</h3>
+        <p>Confidentiality obligations survive termination of any engagement and continue indefinitely unless otherwise specified in writing.</p>
+      </section>
 
-    <h3>8. Data Privacy and Security</h3>
-    <h4>8.1 Private Architecture</h4>
-    <p>All AI systems, Knowledge Databases, and custom applications are developed as private, secure applications dedicated to Client's business. We do not use shared platforms or expose Client data to third-party AI services without explicit consent.</p>
-    <h4>8.2 Data Processing</h4>
-    <p>Client data is processed solely for the purpose of delivering agreed-upon services. We implement industry-standard security measures to protect Client information.</p>
-    <h4>8.3 Data Retention</h4>
-    <p>Upon completion or termination of services, Client data handling will be addressed according to the terms of the applicable engagement agreement. Generally, Client retains full control and ownership of all data.</p>
+      <section>
+        <h2>8. Data Privacy and Security</h2>
+        <h3>8.1 Private Architecture</h3>
+        <p>All AI systems, Knowledge Databases, and custom applications are developed as private, secure applications dedicated to Client's business. We do not use shared platforms or expose Client data to third-party AI services without explicit consent.</p>
+        <h3>8.2 Data Processing</h3>
+        <p>Client data is processed solely for the purpose of delivering agreed-upon services. We implement industry-standard security measures to protect Client information.</p>
+        <h3>8.3 Data Retention</h3>
+        <p>Upon completion or termination of services, Client data handling will be addressed according to the terms of the applicable engagement agreement. Generally, Client retains full control and ownership of all data.</p>
+      </section>
 
-    <h3>9. Warranties and Disclaimers</h3>
-    <h4>9.1 Service Quality</h4>
-    <p>Consultant warrants that services will be performed in a professional and workmanlike manner consistent with industry standards.</p>
-    <h4>9.2 No Guarantee of Results</h4>
-    <p>While we provide ROI estimates and projections during the Scoping Phase, Consultant does not guarantee specific business outcomes, time savings, cost reductions, or revenue increases. Actual results will vary based on numerous factors including Client implementation, usage, and business conditions.</p>
-    <h4>9.3 AI Technology Limitations</h4>
-    <p>Client acknowledges that AI technology has inherent limitations and may produce unexpected results. While we implement measures to ensure accuracy and reliability (including RAG technology to ground AI responses in Client's knowledge base), no AI system is perfect. Client is responsible for validating AI outputs for their specific use cases.</p>
-    <h4>9.4 No Legal, Financial, or Medical Advice</h4>
-    <p>Consultant does not provide legal, financial, medical, or other professional advice. AI systems built by Consultant should not be relied upon as a substitute for professional advice in regulated domains.</p>
-    <h4>9.5 Disclaimer of Other Warranties</h4>
-    <p>EXCEPT AS EXPRESSLY PROVIDED HEREIN, CONSULTANT MAKES NO OTHER WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
+      <section>
+        <h2>9. Warranties and Disclaimers</h2>
+        <h3>9.1 Service Quality</h3>
+        <p>Consultant warrants that services will be performed in a professional and workmanlike manner consistent with industry standards.</p>
+        <h3>9.2 No Guarantee of Results</h3>
+        <p>While we provide ROI estimates and projections during the Scoping Phase, Consultant does not guarantee specific business outcomes, time savings, cost reductions, or revenue increases. Actual results will vary based on numerous factors including Client implementation, usage, and business conditions.</p>
+        <h3>9.3 AI Technology Limitations</h3>
+        <p>Client acknowledges that AI technology has inherent limitations and may produce unexpected results. While we implement measures to ensure accuracy and reliability (including RAG technology to ground AI responses in Client's knowledge base), no AI system is perfect. Client is responsible for validating AI outputs for their specific use cases.</p>
+        <h3>9.4 No Legal, Financial, or Medical Advice</h3>
+        <p>Consultant does not provide legal, financial, medical, or other professional advice. AI systems built by Consultant should not be relied upon as a substitute for professional advice in regulated domains.</p>
+        <h3>9.5 Disclaimer of Other Warranties</h3>
+        <p>EXCEPT AS EXPRESSLY PROVIDED HEREIN, CONSULTANT MAKES NO OTHER WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
+      </section>
 
-    <h3>10. Limitation of Liability</h3>
-    <h4>10.1 Maximum Liability</h4>
-    <p>Consultant's total aggregate liability under any engagement shall be limited to the total amount of fees paid by Client for that specific engagement.</p>
-    <h4>10.2 Excluded Damages</h4>
-    <p>IN NO EVENT SHALL CONSULTANT BE LIABLE FOR INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOST PROFITS, LOST REVENUE, LOST DATA, OR BUSINESS INTERRUPTION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
-    <h4>10.3 Client Responsibility</h4>
-    <p>Client is responsible for:</p>
-    <ul>
-      <li>Proper implementation and use of delivered systems</li>
-      <li>Training of Client's team members</li>
-      <li>Backup of Client data</li>
-      <li>Compliance with applicable laws and regulations in Client's use of AI systems</li>
-    </ul>
+      <section>
+        <h2>10. Limitation of Liability</h2>
+        <h3>10.1 Maximum Liability</h3>
+        <p>Consultant's total aggregate liability under any engagement shall be limited to the total amount of fees paid by Client for that specific engagement.</p>
+        <h3>10.2 Excluded Damages</h3>
+        <p>IN NO EVENT SHALL CONSULTANT BE LIABLE FOR INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOST PROFITS, LOST REVENUE, LOST DATA, OR BUSINESS INTERRUPTION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+        <h3>10.3 Client Responsibility</h3>
+        <p>Client is responsible for:</p>
+        <ul>
+          <li>Proper implementation and use of delivered systems</li>
+          <li>Training of Client's team members</li>
+          <li>Backup of Client data</li>
+          <li>Compliance with applicable laws and regulations in Client's use of AI systems</li>
+        </ul>
+      </section>
 
-    <h3>11. Termination</h3>
-    <h4>11.1 Termination Rights</h4>
-    <p>Either party may terminate an engagement according to the terms specified in the applicable engagement agreement.</p>
-    <h4>11.2 Effect of Termination</h4>
-    <p>Upon termination:</p>
-    <ul>
-      <li>All outstanding fees become immediately due and payable</li>
-      <li>Consultant will provide Client with any work-in-progress deliverables</li>
-      <li>Confidentiality obligations survive termination</li>
-      <li>Client's right to use partially completed systems is governed by the applicable engagement agreement</li>
-    </ul>
-    <h4>11.3 Refund Policy</h4>
-    <p>Fees paid are generally non-refundable except as specifically provided in the applicable engagement agreement. For the Scoping Package, if Consultant fails to deliver agreed-upon deliverables, Client may request a refund on a prorated basis for undelivered work.</p>
+      <section>
+        <h2>11. Termination</h2>
+        <h3>11.1 Termination Rights</h3>
+        <p>Either party may terminate an engagement according to the terms specified in the applicable engagement agreement.</p>
+        <h3>11.2 Effect of Termination</h3>
+        <p>Upon termination:</p>
+        <ul>
+          <li>All outstanding fees become immediately due and payable</li>
+          <li>Consultant will provide Client with any work-in-progress deliverables</li>
+          <li>Confidentiality obligations survive termination</li>
+          <li>Client's right to use partially completed systems is governed by the applicable engagement agreement</li>
+        </ul>
+        <h3>11.3 Refund Policy</h3>
+        <p>Fees paid are generally non-refundable except as specifically provided in the applicable engagement agreement. For the Scoping Package, if Consultant fails to deliver agreed-upon deliverables, Client may request a refund on a prorated basis for undelivered work.</p>
+      </section>
 
-    <h3>12. Additional Cost Considerations</h3>
-    <h4>12.1 Ongoing Operational Costs</h4>
-    <p>Custom AI applications may incur ongoing operational costs including but not limited to:</p>
-    <p><strong>Knowledge Ingestion:</strong></p>
-    <ul>
-      <li>Costs for processing and ingesting data into Knowledge Databases</li>
-      <li>Typical rates: approximately $5 per million input tokens; $18 per million output tokens</li>
-      <li>Actual costs vary based on usage and data volume</li>
-    </ul>
-    <p><strong>Hosting and Infrastructure:</strong></p>
-    <ul>
-      <li>Monthly hosting charges for deployed applications</li>
-      <li>Typical rates: approximately $197 per month</li>
-      <li>Actual costs may vary based on usage, scale, and infrastructure requirements</li>
-    </ul>
-    <p><strong>API and Third-Party Services:</strong></p>
-    <ul>
-      <li>Costs for third-party AI models, APIs, or integrated services</li>
-      <li>Billed at actual cost or according to third-party provider terms</li>
-    </ul>
-    <h4>12.2 Maintenance and Support</h4>
-    <p><strong>Initial Support Period:</strong></p>
-    <ul>
-      <li>Typically includes up to 30 hours of complimentary support during the first 3 months post-deployment</li>
-      <li>Covers bug fixes, technical issues, and system optimization</li>
-    </ul>
-    <p><strong>Ongoing Support:</strong></p>
-    <ul>
-      <li>Available at hourly rates (typically $100-$150 per hour)</li>
-      <li>Covers updates, enhancements, additional training, and technical support</li>
-      <li>Optional maintenance agreements may be available</li>
-    </ul>
-    <h4>12.3 Cost Estimates</h4>
-    <p>All ongoing costs are estimated during the Scoping Phase and confirmed in the Development Proposal. Actual costs may vary based on usage patterns and are the responsibility of Client.</p>
+      <section>
+        <h2>12. Additional Cost Considerations</h2>
+        <h3>12.1 Ongoing Operational Costs</h3>
+        <p>Custom AI applications may incur ongoing operational costs including but not limited to:</p>
+        <p><strong>Knowledge Ingestion:</strong></p>
+        <ul>
+          <li>Costs for processing and ingesting data into Knowledge Databases</li>
+          <li>Typical rates: approximately $5 per million input tokens; $18 per million output tokens</li>
+          <li>Actual costs vary based on usage and data volume</li>
+        </ul>
+        <p><strong>Hosting and Infrastructure:</strong></p>
+        <ul>
+          <li>Monthly hosting charges for deployed applications</li>
+          <li>Typical rates: approximately $197 per month</li>
+          <li>Actual costs may vary based on usage, scale, and infrastructure requirements</li>
+        </ul>
+        <p><strong>API and Third-Party Services:</strong></p>
+        <ul>
+          <li>Costs for third-party AI models, APIs, or integrated services</li>
+          <li>Billed at actual cost or according to third-party provider terms</li>
+        </ul>
+        <h3>12.2 Maintenance and Support</h3>
+        <p><strong>Initial Support Period:</strong></p>
+        <ul>
+          <li>Typically includes up to 30 hours of complimentary support during the first 3 months post-deployment</li>
+          <li>Covers bug fixes, technical issues, and system optimization</li>
+        </ul>
+        <p><strong>Ongoing Support:</strong></p>
+        <ul>
+          <li>Available at hourly rates (typically $100-$150 per hour)</li>
+          <li>Covers updates, enhancements, additional training, and technical support</li>
+          <li>Optional maintenance agreements may be available</li>
+        </ul>
+        <h3>12.3 Cost Estimates</h3>
+        <p>All ongoing costs are estimated during the Scoping Phase and confirmed in the Development Proposal. Actual costs may vary based on usage patterns and are the responsibility of Client.</p>
+      </section>
 
-    <h3>13. Website Use and Content</h3>
-    <h4>13.1 Website Access</h4>
-    <p>Consultant grants you a limited, non-exclusive, non-transferable license to access and use our website for informational purposes. You may not:</p>
-    <ul>
-      <li>Copy, modify, or distribute website content without permission</li>
-      <li>Use automated systems to scrape or harvest website data</li>
-      <li>Attempt to gain unauthorized access to website systems</li>
-      <li>Use the website for any unlawful purpose</li>
-    </ul>
-    <h4>13.2 Content Accuracy</h4>
-    <p>While we strive to provide accurate and up-to-date information on our website, we make no warranties regarding the accuracy, completeness, or timeliness of website content. Service descriptions, pricing, and other details are subject to change without notice.</p>
-    <h4>13.3 Third-Party Links</h4>
-    <p>Our website may contain links to third-party websites. We are not responsible for the content, accuracy, or practices of third-party sites.</p>
+      <section>
+        <h2>13. Website Use and Content</h2>
+        <h3>13.1 Website Access</h3>
+        <p>Consultant grants you a limited, non-exclusive, non-transferable license to access and use our website for informational purposes. You may not:</p>
+        <ul>
+          <li>Copy, modify, or distribute website content without permission</li>
+          <li>Use automated systems to scrape or harvest website data</li>
+          <li>Attempt to gain unauthorized access to website systems</li>
+          <li>Use the website for any unlawful purpose</li>
+        </ul>
+        <h3>13.2 Content Accuracy</h3>
+        <p>While we strive to provide accurate and up-to-date information on our website, we make no warranties regarding the accuracy, completeness, or timeliness of website content. Service descriptions, pricing, and other details are subject to change without notice.</p>
+        <h3>13.3 Third-Party Links</h3>
+        <p>Our website may contain links to third-party websites. We are not responsible for the content, accuracy, or practices of third-party sites.</p>
+      </section>
 
-    <h3>14. Indemnification</h3>
-    <p>Client agrees to indemnify, defend, and hold harmless Consultant, its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including reasonable attorneys' fees) arising from:</p>
-    <ul>
-      <li>Client's use or misuse of delivered AI systems</li>
-      <li>Client's violation of these Terms and Conditions</li>
-      <li>Client's violation of applicable laws or regulations</li>
-      <li>Claims that Client's data or content infringes third-party rights</li>
-    </ul>
+      <section>
+        <h2>14. Indemnification</h2>
+        <p>Client agrees to indemnify, defend, and hold harmless Consultant, its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including reasonable attorneys' fees) arising from:</p>
+        <ul>
+          <li>Client's use or misuse of delivered AI systems</li>
+          <li>Client's violation of these Terms and Conditions</li>
+          <li>Client's violation of applicable laws or regulations</li>
+          <li>Claims that Client's data or content infringes third-party rights</li>
+        </ul>
+      </section>
 
-    <h3>15. Case Studies and Testimonials</h3>
-    <h4>15.1 Permission to Feature</h4>
-    <p>Upon successful completion of an engagement, Consultant may request permission to feature Client as a case study or testimonial. Client retains full discretion to approve or decline such requests.</p>
-    <h4>15.2 Anonymized Data</h4>
-    <p>Consultant may use anonymized, aggregated data from engagements for research, marketing, and service improvement purposes, provided such use does not identify Client or reveal confidential information.</p>
+      <section>
+        <h2>15. Case Studies and Testimonials</h2>
+        <h3>15.1 Permission to Feature</h3>
+        <p>Upon successful completion of an engagement, Consultant may request permission to feature Client as a case study or testimonial. Client retains full discretion to approve or decline such requests.</p>
+        <h3>15.2 Anonymized Data</h3>
+        <p>Consultant may use anonymized, aggregated data from engagements for research, marketing, and service improvement purposes, provided such use does not identify Client or reveal confidential information.</p>
+      </section>
 
-    <h3>16. Dispute Resolution</h3>
-    <h4>16.1 Governing Law</h4>
-    <p>These Terms and Conditions and all engagements shall be governed by and construed in accordance with the laws of Ontario, Canada, without regard to conflict of law principles.</p>
-    <h4>16.2 Negotiation First</h4>
-    <p>In the event of any dispute, the parties agree to first attempt to resolve the matter through good-faith negotiation.</p>
-    <h4>16.3 Jurisdiction</h4>
-    <p>If negotiation fails, parties agree to submit to the exclusive jurisdiction of the courts located in Ontario, Canada.</p>
+      <section>
+        <h2>16. Dispute Resolution</h2>
+        <h3>16.1 Governing Law</h3>
+        <p>These Terms and Conditions and all engagements shall be governed by and construed in accordance with the laws of Ontario, Canada, without regard to conflict of law principles.</p>
+        <h3>16.2 Negotiation First</h3>
+        <p>In the event of any dispute, the parties agree to first attempt to resolve the matter through good-faith negotiation.</p>
+        <h3>16.3 Jurisdiction</h3>
+        <p>If negotiation fails, parties agree to submit to the exclusive jurisdiction of the courts located in Ontario, Canada.</p>
+      </section>
 
-    <h3>17. General Provisions</h3>
-    <h4>17.1 Entire Agreement</h4>
-    <p>These Terms and Conditions, together with any executed engagement agreements, constitute the entire agreement between the parties regarding the subject matter and supersede all prior agreements and understandings.</p>
-    <h4>17.2 Amendments</h4>
-    <p>Consultant reserves the right to modify these Terms and Conditions at any time. Changes will be effective upon posting to our website. Continued use of our services constitutes acceptance of modified terms. Existing engagements will be governed by the terms in effect at the time the engagement agreement was executed.</p>
-    <h4>17.3 Severability</h4>
-    <p>If any provision of these Terms and Conditions is found to be invalid or unenforceable, the remaining provisions will continue in full force and effect.</p>
-    <h4>17.4 Waiver</h4>
-    <p>Failure by either party to enforce any provision of these Terms and Conditions shall not constitute a waiver of that provision or any other provision.</p>
-    <h4>17.5 Assignment</h4>
-    <p>Client may not assign or transfer any rights or obligations under these Terms and Conditions without prior written consent from Consultant. Consultant may assign its rights and obligations to any successor entity.</p>
-    <h4>17.6 Force Majeure</h4>
-    <p>Neither party shall be liable for failure to perform obligations due to circumstances beyond reasonable control, including acts of God, war, terrorism, pandemics, government actions, or infrastructure failures.</p>
-    <h4>17.7 Notices</h4>
-    <p>All notices under these Terms and Conditions must be in writing and delivered via email or registered mail to the addresses provided in the applicable engagement agreement.</p>
+      <section>
+        <h2>17. General Provisions</h2>
+        <h3>17.1 Entire Agreement</h3>
+        <p>These Terms and Conditions, together with any executed engagement agreements, constitute the entire agreement between the parties regarding the subject matter and supersede all prior agreements and understandings.</p>
+        <h3>17.2 Amendments</h3>
+        <p>Consultant reserves the right to modify these Terms and Conditions at any time. Changes will be effective upon posting to our website. Continued use of our services constitutes acceptance of modified terms. Existing engagements will be governed by the terms in effect at the time the engagement agreement was executed.</p>
+        <h3>17.3 Severability</h3>
+        <p>If any provision of these Terms and Conditions is found to be invalid or unenforceable, the remaining provisions will continue in full force and effect.</p>
+        <h3>17.4 Waiver</h3>
+        <p>Failure by either party to enforce any provision of these Terms and Conditions shall not constitute a waiver of that provision or any other provision.</p>
+        <h3>17.5 Assignment</h3>
+        <p>Client may not assign or transfer any rights or obligations under these Terms and Conditions without prior written consent from Consultant. Consultant may assign its rights and obligations to any successor entity.</p>
+        <h3>17.6 Force Majeure</h3>
+        <p>Neither party shall be liable for failure to perform obligations due to circumstances beyond reasonable control, including acts of God, war, terrorism, pandemics, government actions, or infrastructure failures.</p>
+        <h3>17.7 Notices</h3>
+        <p>All notices under these Terms and Conditions must be in writing and delivered via email or registered mail to the addresses provided in the applicable engagement agreement.</p>
+      </section>
 
-    <h3>18. SMS Communications</h3>
-    <p><strong>Description of SMS Use Cases:</strong> Crafty Codr sends a low volume mix of SMS messages including application status updates, follow-up communications, and appointment reminders to users who have explicitly opted in.</p>
-    <p><strong>Opt-Out Instructions:</strong> You can cancel SMS messages at any time. Reply STOP to unsubscribe. After you send STOP, we will send you a final message to confirm you have been unsubscribed. Reply HELP for help. You can also contact us at <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a>.</p>
-    <p><strong>Customer Support Contact:</strong> For support, contact us at <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a> or visit <a href="https://oughtabee.ai">oughtabee.ai</a>.</p>
-    <p><strong>Message &amp; Data Rate Disclosure:</strong> Message and data rates may apply for SMS messages sent to you. Message frequency varies.</p>
-    <p><strong>Carrier Liability Disclaimer:</strong> Carriers are not liable for delayed or undelivered messages.</p>
-    <p><strong>Age Restriction:</strong> You must be 18 years of age or older to opt in to receive SMS communications from Crafty Codr.</p>
-    <p><strong>Link to Privacy Policy:</strong> For more information on how we handle your data, please review our <a href="privacy.html">Privacy Policy</a> at <a href="https://oughtabee.ai/privacy.html">oughtabee.ai/privacy</a>.</p>
+      <section>
+        <h2>18. SMS Communications</h2>
+        <p><strong>Description of SMS Use Cases:</strong> Crafty Codr sends a low volume mix of SMS messages including application status updates, follow-up communications, and appointment reminders to users who have explicitly opted in.</p>
+        <p><strong>Opt-Out Instructions:</strong> You can cancel SMS messages at any time. Reply STOP to unsubscribe. After you send STOP, we will send you a final message to confirm you have been unsubscribed. Reply HELP for help. You can also contact us at <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a>.</p>
+        <p><strong>Customer Support Contact:</strong> For support, contact us at <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a> or visit <a href="https://oughtabee.ai">oughtabee.ai</a>.</p>
+        <p><strong>Message &amp; Data Rate Disclosure:</strong> Message and data rates may apply for SMS messages sent to you. Message frequency varies.</p>
+        <p><strong>Carrier Liability Disclaimer:</strong> Carriers are not liable for delayed or undelivered messages.</p>
+        <p><strong>Age Restriction:</strong> You must be 18 years of age or older to opt in to receive SMS communications from Crafty Codr.</p>
+        <p><strong>Link to Privacy Policy:</strong> For more information on how we handle your data, please review our <a href="privacy.html">Privacy Policy</a>.</p>
+      </section>
 
-    <h3>19. Contact Information</h3>
-    <p>For questions about these Terms and Conditions or our services, please contact:</p>
-    <p><strong>Crafty Codr Inc.</strong></p>
-    <p>Email: <a href="mailto:trevor@craftycodr.com">trevor@craftycodr.com</a><br>Website: <a href="https://oughtabee.ai">https://oughtabee.ai</a></p>
+      <section>
+        <h2>19. Contact Information</h2>
+        <p>For questions about these Terms and Conditions or our services, please contact:</p>
+        <p><strong>Crafty Codr Inc.</strong><br>Email: <a href="mailto:trevor@craftycodr.com">trevor@craftycodr.com</a><br>Website: <a href="https://oughtabee.ai">oughtabee.ai</a></p>
+      </section>
 
-    <h3>Acknowledgment</h3>
-    <p>By using our website, scheduling a discovery call, or engaging our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</p>
-
-    <p>Last Updated: December 2, 2025</p>
-    <p>These Terms and Conditions are subject to change. Please review periodically for updates.</p>
+      <section>
+        <h2>Acknowledgment</h2>
+        <p>By using our website, scheduling a discovery call, or engaging our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</p>
+        <p class="legal-updated">These Terms and Conditions are subject to change. Please review periodically for updates.</p>
+      </section>
+    </div>
   </main>
 
+  <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
-    <div class="container">
-      <p><strong>Crafty Codr</strong></p>
-      <p><a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a> · <a href="https://oughtabee.ai">oughtabee.ai</a></p>
-      <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
-      <p>151 Lyndhurst Drive, Kitchener, Ontario N2B 1B7 Canada</p>
-      <p>SMS consent is not a condition of purchase.</p>
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="public/logo-dark.webp" alt="OughtaBee AI" class="footer-logo-icon">
+        <span>OughtaBee AI</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2025 Crafty Codr Inc. All rights reserved.</span>
+      <span class="footer-copy">151 Lyndhurst Drive, Kitchener, Ontario N2B 1B7 Canada</span>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+      document.querySelector('.header-nav').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

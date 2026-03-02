@@ -10,463 +10,441 @@
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="public/favicon.png">
   <title>Privacy Policy — OughtaBee AI</title>
-  <style>
-    :root {
-      --color-bg: #ffffff;
-      --color-text: #333333;
-      --color-text-light: #666666;
-      --color-heading: #222222;
-      --color-red: #c02b0a;
-      --color-red-hover: #a02208;
-      --color-border-light: #e8e8e8;
-      --font-serif: Georgia, 'Times New Roman', serif;
-      --font-sans: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-      --max-width: 720px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: var(--font-sans);
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--color-text);
-      background: var(--color-bg);
-      -webkit-font-smoothing: antialiased;
-    }
-    .header {
-      border-bottom: 1px solid var(--color-border-light);
-      padding: 14px 24px;
-      background: #fafafa;
-    }
-    .header-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-family: var(--font-serif);
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--color-heading);
-      text-decoration: none;
-    }
-    .logo span { color: var(--color-red); }
-    .header-nav a {
-      font-size: 13px;
-      color: var(--color-text-light);
-      text-decoration: none;
-      margin-left: 20px;
-    }
-    .header-nav a:hover { color: var(--color-red); }
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .legal-content { padding: 40px 0 60px; }
-    h2 {
-      font-family: var(--font-serif);
-      font-size: 30px;
-      line-height: 1.3;
-      color: var(--color-heading);
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-    h3 {
-      font-family: var(--font-serif);
-      font-size: 22px;
-      line-height: 1.35;
-      color: var(--color-heading);
-      font-weight: normal;
-      margin-bottom: 16px;
-      margin-top: 28px;
-    }
-    h4 {
-      font-family: var(--font-sans);
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--color-heading);
-      margin-bottom: 10px;
-      margin-top: 20px;
-    }
-    p { margin-bottom: 16px; }
-    a { color: var(--color-red); text-decoration: underline; }
-    a:hover { color: var(--color-red-hover); }
-    ul { margin: 16px 0; padding-left: 24px; }
-    li { margin-bottom: 8px; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
-    th, td { border: 1px solid var(--color-border-light); padding: 10px 12px; text-align: left; }
-    th { background: #fafafa; font-weight: 600; color: var(--color-heading); }
-    .footer {
-      text-align: center;
-      padding: 40px 0;
-      border-top: 1px solid var(--color-border-light);
-      font-size: 13px;
-      color: var(--color-text-light);
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/legal.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFTSR72P"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ═══ HEADER ═══ -->
   <header class="header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">Oughta <span>Bee</span> AI</a>
-      <nav class="header-nav">
-        <a href="index.html#how">How It Works</a>
-        <a href="index.html#team">About Us</a>
-        <a href="https://leads.oughtabee.ai/apply">Apply Now</a>
-        <a href="https://blog.oughtabee.ai/">Blog</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms &amp; Conditions</a>
-      </nav>
-    </div>
+    <a href="index.html" class="header-logo">
+      <img src="public/logo.webp" alt="OughtaBee AI" class="header-logo-icon">
+      <span class="header-logo-text">OughtaBee AI</span>
+    </a>
+    <button class="mobile-toggle" aria-label="Menu">
+      <i data-lucide="menu" style="width:24px;height:24px"></i>
+    </button>
+    <nav class="header-nav">
+      <a href="index.html#how">How It Works</a>
+      <a href="index.html#team">About Us</a>
+      <a href="https://blog.oughtabee.ai/">Blog</a>
+      <a href="https://leads.oughtabee.ai/apply" class="btn-primary btn-primary--sm">Apply Now <span>&rarr;</span></a>
+    </nav>
   </header>
 
-  <main class="container legal-content">
-    <h2>Privacy Policy</h2>
-    <p><strong>Crafty Codr Inc. OughtaBee AI Platform (app.oughtabee.ai)</strong></p>
-    <p>Last Updated: December 11, 2025</p>
+  <!-- ═══ LEGAL CONTENT ═══ -->
+  <main class="legal">
+    <div class="legal-header">
+      <span class="section-label">LEGAL</span>
+      <h1>Privacy Policy</h1>
+      <p class="legal-meta">Crafty Codr Inc. &middot; OughtaBee AI Platform (app.oughtabee.ai) &middot; Last Updated: December 11, 2025</p>
+    </div>
 
-    <h3>Introduction</h3>
-    <p>Crafty Codr Inc. ("Company," "we," "us," or "our") operates the OughtaBee AI platform ("Platform," "Service"), accessible at app.oughtabee.ai and through custom tenant applications deployed on customer domains.</p>
-    <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Platform. Please read this policy carefully. By accessing or using the Service, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.</p>
-    <p>If you do not agree with the terms of this Privacy Policy, please do not access the Service.</p>
+    <div class="legal-body">
+      <section>
+        <h2>Introduction</h2>
+        <p>Crafty Codr Inc. ("Company," "we," "us," or "our") operates the OughtaBee AI platform ("Platform," "Service"), accessible at app.oughtabee.ai and through custom tenant applications deployed on customer domains.</p>
+        <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Platform. Please read this policy carefully. By accessing or using the Service, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.</p>
+        <p>If you do not agree with the terms of this Privacy Policy, please do not access the Service.</p>
+      </section>
 
-    <h3>1. Information We Collect</h3>
-    <h4>1.1 Account Information</h4>
-    <p>When you create an account, we collect:</p>
-    <ul>
-      <li>Email address (required, used as unique identifier)</li>
-      <li>Name/display name (optional)</li>
-      <li>Profile image (optional, URL reference only)</li>
-      <li>Password (if using email/password authentication, stored as bcrypt hash)</li>
-      <li>Authentication provider information (if using Google OAuth)</li>
-    </ul>
-    <h4>1.2 Organization Information</h4>
-    <p>When you create or join an organization, we collect:</p>
-    <ul>
-      <li>Organization name</li>
-      <li>Organization description (optional)</li>
-      <li>Billing contact email</li>
-      <li>Payment information (processed via Stripe; we store only card brand, last 4 digits, and expiration date)</li>
-      <li>Organization preferences and settings</li>
-    </ul>
-    <h4>1.3 Connected Account Data</h4>
-    <p>When you connect third-party data sources, we collect:</p>
-    <p><strong>Google Drive:</strong></p>
-    <ul>
-      <li>OAuth access and refresh tokens (stored securely, never exposed to frontend)</li>
-      <li>File metadata (names, sizes, modification dates, folder structure)</li>
-      <li>File contents (for processing and analysis)</li>
-    </ul>
-    <p><strong>YouTube:</strong></p>
-    <ul>
-      <li>OAuth access and refresh tokens</li>
-      <li>Video metadata (titles, descriptions, publish dates, durations)</li>
-      <li>Video transcripts (generated via transcription services)</li>
-    </ul>
-    <p><strong>Vimeo:</strong></p>
-    <ul>
-      <li>OAuth access token</li>
-      <li>Video metadata and content</li>
-    </ul>
-    <p><strong>Zoom:</strong></p>
-    <ul>
-      <li>OAuth tokens</li>
-      <li>Meeting recordings and metadata</li>
-      <li>Transcripts</li>
-    </ul>
-    <p><strong>Manual Uploads:</strong></p>
-    <ul>
-      <li>Files you directly upload (up to 2GB per file)</li>
-      <li>File metadata and contents</li>
-    </ul>
-    <h4>1.4 Processed Content Data</h4>
-    <p>When files are processed through our Platform, we generate and store:</p>
-    <ul>
-      <li>Extracted text content from documents, videos, and audio</li>
-      <li>AI-generated summaries and analysis</li>
-      <li>Content classifications (topics, categories, tags)</li>
-      <li>Semantic embeddings (vector representations for search)</li>
-      <li>Metadata analysis (sentiment, complexity, quality scores)</li>
-      <li>Extracted entities (people, organizations, locations mentioned)</li>
-      <li>Keywords and key topics</li>
-    </ul>
-    <h4>1.5 Usage and Technical Data</h4>
-    <p>We automatically collect:</p>
-    <ul>
-      <li>Log data (error messages, function execution data, timestamps)</li>
-      <li>API usage metrics (tokens processed, operations performed)</li>
-      <li>Session information (encrypted JWT tokens)</li>
-      <li>Device and browser information (user agent for admin sessions)</li>
-    </ul>
-    <h4>1.6 Payment and Billing Data</h4>
-    <p>For paid services, we collect via Stripe:</p>
-    <ul>
-      <li>Payment method details (card brand, last 4 digits, expiration)</li>
-      <li>Billing history and transaction records</li>
-      <li>Credit balance and usage</li>
-    </ul>
+      <section>
+        <h2>1. Information We Collect</h2>
+        <h3>1.1 Account Information</h3>
+        <p>When you create an account, we collect:</p>
+        <ul>
+          <li>Email address (required, used as unique identifier)</li>
+          <li>Name/display name (optional)</li>
+          <li>Profile image (optional, URL reference only)</li>
+          <li>Password (if using email/password authentication, stored as bcrypt hash)</li>
+          <li>Authentication provider information (if using Google OAuth)</li>
+        </ul>
+        <h3>1.2 Organization Information</h3>
+        <p>When you create or join an organization, we collect:</p>
+        <ul>
+          <li>Organization name</li>
+          <li>Organization description (optional)</li>
+          <li>Billing contact email</li>
+          <li>Payment information (processed via Stripe; we store only card brand, last 4 digits, and expiration date)</li>
+          <li>Organization preferences and settings</li>
+        </ul>
+        <h3>1.3 Connected Account Data</h3>
+        <p>When you connect third-party data sources, we collect:</p>
+        <p><strong>Google Drive:</strong></p>
+        <ul>
+          <li>OAuth access and refresh tokens (stored securely, never exposed to frontend)</li>
+          <li>File metadata (names, sizes, modification dates, folder structure)</li>
+          <li>File contents (for processing and analysis)</li>
+        </ul>
+        <p><strong>YouTube:</strong></p>
+        <ul>
+          <li>OAuth access and refresh tokens</li>
+          <li>Video metadata (titles, descriptions, publish dates, durations)</li>
+          <li>Video transcripts (generated via transcription services)</li>
+        </ul>
+        <p><strong>Vimeo:</strong></p>
+        <ul>
+          <li>OAuth access token</li>
+          <li>Video metadata and content</li>
+        </ul>
+        <p><strong>Zoom:</strong></p>
+        <ul>
+          <li>OAuth tokens</li>
+          <li>Meeting recordings and metadata</li>
+          <li>Transcripts</li>
+        </ul>
+        <p><strong>Manual Uploads:</strong></p>
+        <ul>
+          <li>Files you directly upload (up to 2GB per file)</li>
+          <li>File metadata and contents</li>
+        </ul>
+        <h3>1.4 Processed Content Data</h3>
+        <p>When files are processed through our Platform, we generate and store:</p>
+        <ul>
+          <li>Extracted text content from documents, videos, and audio</li>
+          <li>AI-generated summaries and analysis</li>
+          <li>Content classifications (topics, categories, tags)</li>
+          <li>Semantic embeddings (vector representations for search)</li>
+          <li>Metadata analysis (sentiment, complexity, quality scores)</li>
+          <li>Extracted entities (people, organizations, locations mentioned)</li>
+          <li>Keywords and key topics</li>
+        </ul>
+        <h3>1.5 Usage and Technical Data</h3>
+        <p>We automatically collect:</p>
+        <ul>
+          <li>Log data (error messages, function execution data, timestamps)</li>
+          <li>API usage metrics (tokens processed, operations performed)</li>
+          <li>Session information (encrypted JWT tokens)</li>
+          <li>Device and browser information (user agent for admin sessions)</li>
+        </ul>
+        <h3>1.6 Payment and Billing Data</h3>
+        <p>For paid services, we collect via Stripe:</p>
+        <ul>
+          <li>Payment method details (card brand, last 4 digits, expiration)</li>
+          <li>Billing history and transaction records</li>
+          <li>Credit balance and usage</li>
+        </ul>
+      </section>
 
-    <h3>2. How We Use Your Information</h3>
-    <p>We use the information we collect to:</p>
-    <h4>2.1 Provide and Maintain the Service</h4>
-    <ul>
-      <li>Create and manage your account</li>
-      <li>Process and analyze your uploaded content</li>
-      <li>Generate AI-powered insights and summaries</li>
-      <li>Enable search and retrieval of your knowledge base</li>
-      <li>Process payments and manage billing</li>
-    </ul>
-    <h4>2.2 Improve and Develop the Service</h4>
-    <ul>
-      <li>Monitor and analyze usage patterns</li>
-      <li>Identify and fix technical issues</li>
-      <li>Develop new features and functionality</li>
-      <li>Optimize AI analysis and processing</li>
-    </ul>
-    <h4>2.3 Communicate With You</h4>
-    <ul>
-      <li>Send transactional emails (verification, password reset, invitations)</li>
-      <li>Provide customer support</li>
-      <li>Send service-related notifications</li>
-    </ul>
-    <h4>2.4 Ensure Security and Compliance</h4>
-    <ul>
-      <li>Detect and prevent fraud or abuse</li>
-      <li>Enforce our Terms of Service</li>
-      <li>Comply with legal obligations</li>
-    </ul>
-    <h4>2.5 SMS Opt-In Details</h4>
-    <p>Crafty Codr collects phone numbers for the purpose of sending SMS communications to users who have explicitly opted in via our application form. We send a low volume mix of application updates, follow-up messages, and appointment reminders. SMS consent is not a condition of purchase or service. Users may opt out at any time by replying STOP to any message.</p>
-    <h4>2.6 Mobile Information Sharing Statement</h4>
-    <p>Crafty Codr does not share, sell, rent, or disclose mobile phone numbers or SMS opt-in data to third parties for marketing purposes. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.</p>
+      <section>
+        <h2>2. How We Use Your Information</h2>
+        <p>We use the information we collect to:</p>
+        <h3>2.1 Provide and Maintain the Service</h3>
+        <ul>
+          <li>Create and manage your account</li>
+          <li>Process and analyze your uploaded content</li>
+          <li>Generate AI-powered insights and summaries</li>
+          <li>Enable search and retrieval of your knowledge base</li>
+          <li>Process payments and manage billing</li>
+        </ul>
+        <h3>2.2 Improve and Develop the Service</h3>
+        <ul>
+          <li>Monitor and analyze usage patterns</li>
+          <li>Identify and fix technical issues</li>
+          <li>Develop new features and functionality</li>
+          <li>Optimize AI analysis and processing</li>
+        </ul>
+        <h3>2.3 Communicate With You</h3>
+        <ul>
+          <li>Send transactional emails (verification, password reset, invitations)</li>
+          <li>Provide customer support</li>
+          <li>Send service-related notifications</li>
+        </ul>
+        <h3>2.4 Ensure Security and Compliance</h3>
+        <ul>
+          <li>Detect and prevent fraud or abuse</li>
+          <li>Enforce our Terms of Service</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+        <h3>2.5 SMS Opt-In Details</h3>
+        <p>Crafty Codr collects phone numbers for the purpose of sending SMS communications to users who have explicitly opted in via our application form. We send a low volume mix of application updates, follow-up messages, and appointment reminders. SMS consent is not a condition of purchase or service. Users may opt out at any time by replying STOP to any message.</p>
+        <h3>2.6 Mobile Information Sharing Statement</h3>
+        <p>Crafty Codr does not share, sell, rent, or disclose mobile phone numbers or SMS opt-in data to third parties for marketing purposes. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.</p>
+      </section>
 
-    <h3>3. Third-Party Service Providers</h3>
-    <p>We use the following third-party services to operate our Platform. Your data may be processed by these providers according to their respective privacy policies:</p>
-    <h4>3.1 AI and Analysis Services</h4>
-    <table>
-      <thead>
-        <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>OpenAI</td><td>Content analysis, summarization, classification</td><td>File contents, extracted text</td><td><a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI Privacy Policy</a></td></tr>
-        <tr><td>Anthropic</td><td>AI validation, batch processing</td><td>File contents, extracted text</td><td><a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a></td></tr>
-        <tr><td>Google AI (Gemini)</td><td>Secondary AI validation</td><td>File contents, extracted text</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td></tr>
-        <tr><td>AssemblyAI</td><td>Audio/video transcription</td><td>Audio and video files</td><td><a href="https://www.assemblyai.com/legal/privacy-policy" target="_blank" rel="noopener">AssemblyAI Privacy Policy</a></td></tr>
-      </tbody>
-    </table>
-    <h4>3.2 Infrastructure and Storage</h4>
-    <table>
-      <thead>
-        <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Pinecone</td><td>Vector database for semantic search</td><td>Content embeddings, metadata</td><td><a href="https://www.pinecone.io/privacy-policy/" target="_blank" rel="noopener">Pinecone Privacy Policy</a></td></tr>
-        <tr><td>AWS</td><td>Optional private AI inference</td><td>File contents (if enabled)</td><td><a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">AWS Privacy Policy</a></td></tr>
-      </tbody>
-    </table>
-    <h4>3.3 Authentication and Communication</h4>
-    <table>
-      <thead>
-        <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Google OAuth</td><td>Authentication, Drive/YouTube access</td><td>Email, profile info, OAuth tokens</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td></tr>
-        <tr><td>Resend</td><td>Transactional email delivery</td><td>Email addresses, message content</td><td><a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend Privacy Policy</a></td></tr>
-      </tbody>
-    </table>
-    <h4>3.4 Payment Processing</h4>
-    <table>
-      <thead>
-        <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Stripe</td><td>Payment processing, billing</td><td>Payment details, billing info</td><td><a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe Privacy Policy</a></td></tr>
-      </tbody>
-    </table>
-    <h4>3.5 Background Processing</h4>
-    <table>
-      <thead>
-        <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Inngest</td><td>Job orchestration</td><td>Task metadata, processing status</td><td><a href="https://www.inngest.com/privacy" target="_blank" rel="noopener">Inngest Privacy Policy</a></td></tr>
-      </tbody>
-    </table>
+      <section>
+        <h2>3. Third-Party Service Providers</h2>
+        <p>We use the following third-party services to operate our Platform. Your data may be processed by these providers according to their respective privacy policies:</p>
+        <h3>3.1 AI and Analysis Services</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>OpenAI</td><td>Content analysis, summarization, classification</td><td>File contents, extracted text</td><td><a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI Privacy Policy</a></td></tr>
+              <tr><td>Anthropic</td><td>AI validation, batch processing</td><td>File contents, extracted text</td><td><a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a></td></tr>
+              <tr><td>Google AI (Gemini)</td><td>Secondary AI validation</td><td>File contents, extracted text</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td></tr>
+              <tr><td>AssemblyAI</td><td>Audio/video transcription</td><td>Audio and video files</td><td><a href="https://www.assemblyai.com/legal/privacy-policy" target="_blank" rel="noopener">AssemblyAI Privacy Policy</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>3.2 Infrastructure and Storage</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Pinecone</td><td>Vector database for semantic search</td><td>Content embeddings, metadata</td><td><a href="https://www.pinecone.io/privacy-policy/" target="_blank" rel="noopener">Pinecone Privacy Policy</a></td></tr>
+              <tr><td>AWS</td><td>Optional private AI inference</td><td>File contents (if enabled)</td><td><a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">AWS Privacy Policy</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>3.3 Authentication and Communication</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Google OAuth</td><td>Authentication, Drive/YouTube access</td><td>Email, profile info, OAuth tokens</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td></tr>
+              <tr><td>Resend</td><td>Transactional email delivery</td><td>Email addresses, message content</td><td><a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend Privacy Policy</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>3.4 Payment Processing</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Stripe</td><td>Payment processing, billing</td><td>Payment details, billing info</td><td><a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe Privacy Policy</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>3.5 Background Processing</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Inngest</td><td>Job orchestration</td><td>Task metadata, processing status</td><td><a href="https://www.inngest.com/privacy" target="_blank" rel="noopener">Inngest Privacy Policy</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <h3>4. Data Storage and Security</h3>
-    <h4>4.1 Data Storage</h4>
-    <ul>
-      <li><strong>Primary Database:</strong> MySQL database storing account information, file metadata, and analysis results</li>
-      <li><strong>Vector Database:</strong> Pinecone storing semantic embeddings with organization-level namespace isolation</li>
-      <li><strong>Temporary Storage:</strong> Files are temporarily stored during processing and deleted immediately after</li>
-    </ul>
-    <h4>4.2 Security Measures</h4>
-    <p>We implement industry-standard security measures including:</p>
-    <ul>
-      <li><strong>Encryption at Rest:</strong> Sensitive data such as API keys are encrypted using AES-256-GCM</li>
-      <li><strong>Password Hashing:</strong> User passwords are hashed using bcrypt with 12 rounds</li>
-      <li><strong>Token Protection:</strong> OAuth tokens are stored securely and never exposed to frontend applications</li>
-      <li><strong>Session Security:</strong> JWT-based sessions with cryptographic signing</li>
-      <li><strong>Access Control:</strong> Role-based access control (Owner, Admin, Member) within organizations</li>
-      <li><strong>Multi-Tenant Isolation:</strong> All data is isolated by organization with enforced access boundaries</li>
-    </ul>
-    <h4>4.3 Data Residency</h4>
-    <p>Our primary services operate in the United States. Third-party providers may process data in various locations according to their infrastructure. For specific data residency requirements, please contact us.</p>
+      <section>
+        <h2>4. Data Storage and Security</h2>
+        <h3>4.1 Data Storage</h3>
+        <ul>
+          <li><strong>Primary Database:</strong> MySQL database storing account information, file metadata, and analysis results</li>
+          <li><strong>Vector Database:</strong> Pinecone storing semantic embeddings with organization-level namespace isolation</li>
+          <li><strong>Temporary Storage:</strong> Files are temporarily stored during processing and deleted immediately after</li>
+        </ul>
+        <h3>4.2 Security Measures</h3>
+        <p>We implement industry-standard security measures including:</p>
+        <ul>
+          <li><strong>Encryption at Rest:</strong> Sensitive data such as API keys are encrypted using AES-256-GCM</li>
+          <li><strong>Password Hashing:</strong> User passwords are hashed using bcrypt with 12 rounds</li>
+          <li><strong>Token Protection:</strong> OAuth tokens are stored securely and never exposed to frontend applications</li>
+          <li><strong>Session Security:</strong> JWT-based sessions with cryptographic signing</li>
+          <li><strong>Access Control:</strong> Role-based access control (Owner, Admin, Member) within organizations</li>
+          <li><strong>Multi-Tenant Isolation:</strong> All data is isolated by organization with enforced access boundaries</li>
+        </ul>
+        <h3>4.3 Data Residency</h3>
+        <p>Our primary services operate in the United States. Third-party providers may process data in various locations according to their infrastructure. For specific data residency requirements, please contact us.</p>
+      </section>
 
-    <h3>5. Data Retention</h3>
-    <h4>5.1 Account Data</h4>
-    <ul>
-      <li>Retained for the duration of your account</li>
-      <li>Deleted upon account deletion request</li>
-    </ul>
-    <h4>5.2 Content Data</h4>
-    <ul>
-      <li>Retained until you delete specific files or your account</li>
-      <li>Vector embeddings deleted when source files are removed</li>
-    </ul>
-    <h4>5.3 System Logs</h4>
-    <ul>
-      <li><strong>Retention Period:</strong> 30 days</li>
-      <li>Automatically purged after retention period</li>
-    </ul>
-    <h4>5.4 Payment Records</h4>
-    <ul>
-      <li>Retained as required by financial regulations and tax laws</li>
-      <li>Typically 7 years for transaction records</li>
-    </ul>
+      <section>
+        <h2>5. Data Retention</h2>
+        <h3>5.1 Account Data</h3>
+        <ul>
+          <li>Retained for the duration of your account</li>
+          <li>Deleted upon account deletion request</li>
+        </ul>
+        <h3>5.2 Content Data</h3>
+        <ul>
+          <li>Retained until you delete specific files or your account</li>
+          <li>Vector embeddings deleted when source files are removed</li>
+        </ul>
+        <h3>5.3 System Logs</h3>
+        <ul>
+          <li><strong>Retention Period:</strong> 30 days</li>
+          <li>Automatically purged after retention period</li>
+        </ul>
+        <h3>5.4 Payment Records</h3>
+        <ul>
+          <li>Retained as required by financial regulations and tax laws</li>
+          <li>Typically 7 years for transaction records</li>
+        </ul>
+      </section>
 
-    <h3>6. Your Rights and Choices</h3>
-    <h4>6.1 Access Your Data</h4>
-    <p>You can access your account information, connected sources, and processed content through the Platform dashboard.</p>
-    <h4>6.2 Update Your Information</h4>
-    <p>You can update your profile information, organization details, and preferences through account settings.</p>
-    <h4>6.3 Delete Your Data</h4>
-    <p>You have the right to delete your data:</p>
-    <ul>
-      <li><strong>Individual Files:</strong> Delete specific files through the "Manage Content" interface</li>
-      <li><strong>Source Connections:</strong> Disconnect data sources to stop syncing (with option to delete associated files)</li>
-      <li><strong>Account Deletion:</strong> Delete your entire account through account settings</li>
-    </ul>
-    <p><strong>Important:</strong> If you are the sole Owner of an organization, deleting your account will delete the entire organization and all associated data for all members.</p>
-    <h4>6.4 Disconnect Third-Party Services</h4>
-    <p>You can disconnect Google Drive, YouTube, Vimeo, or Zoom connections at any time through the Platform. This will:</p>
-    <ul>
-      <li>Revoke our access to fetch new data</li>
-      <li>Optionally delete previously synced content</li>
-    </ul>
-    <h4>6.5 Export Your Data</h4>
-    <p>To request an export of your data, please contact us at the email address below. We will provide your data in a commonly used, machine-readable format.</p>
-    <h4>6.6 Opt-Out of Communications</h4>
-    <p>You can opt out of non-essential communications, but you will continue to receive transactional emails necessary for service operation.</p>
+      <section>
+        <h2>6. Your Rights and Choices</h2>
+        <h3>6.1 Access Your Data</h3>
+        <p>You can access your account information, connected sources, and processed content through the Platform dashboard.</p>
+        <h3>6.2 Update Your Information</h3>
+        <p>You can update your profile information, organization details, and preferences through account settings.</p>
+        <h3>6.3 Delete Your Data</h3>
+        <p>You have the right to delete your data:</p>
+        <ul>
+          <li><strong>Individual Files:</strong> Delete specific files through the "Manage Content" interface</li>
+          <li><strong>Source Connections:</strong> Disconnect data sources to stop syncing (with option to delete associated files)</li>
+          <li><strong>Account Deletion:</strong> Delete your entire account through account settings</li>
+        </ul>
+        <p><strong>Important:</strong> If you are the sole Owner of an organization, deleting your account will delete the entire organization and all associated data for all members.</p>
+        <h3>6.4 Disconnect Third-Party Services</h3>
+        <p>You can disconnect Google Drive, YouTube, Vimeo, or Zoom connections at any time through the Platform. This will:</p>
+        <ul>
+          <li>Revoke our access to fetch new data</li>
+          <li>Optionally delete previously synced content</li>
+        </ul>
+        <h3>6.5 Export Your Data</h3>
+        <p>To request an export of your data, please contact us at the email address below. We will provide your data in a commonly used, machine-readable format.</p>
+        <h3>6.6 Opt-Out of Communications</h3>
+        <p>You can opt out of non-essential communications, but you will continue to receive transactional emails necessary for service operation.</p>
+      </section>
 
-    <h3>7. Multi-Tenant Architecture</h3>
-    <h4>7.1 Tenant Applications</h4>
-    <p>Our Platform supports deployment through custom tenant applications on your own domain. When you access our Service through a tenant application:</p>
-    <ul>
-      <li>Authentication and data synchronization occurs through app.oughtabee.ai</li>
-      <li>Your data is associated with your organization regardless of access point</li>
-      <li>The same privacy protections apply across all access methods</li>
-    </ul>
-    <h4>7.2 Organization Isolation</h4>
-    <p>Each organization's data is strictly isolated:</p>
-    <ul>
-      <li>Database queries are scoped to your organization</li>
-      <li>Vector embeddings are stored in organization-specific namespaces</li>
-      <li>No cross-organization data access is possible</li>
-    </ul>
+      <section>
+        <h2>7. Multi-Tenant Architecture</h2>
+        <h3>7.1 Tenant Applications</h3>
+        <p>Our Platform supports deployment through custom tenant applications on your own domain. When you access our Service through a tenant application:</p>
+        <ul>
+          <li>Authentication and data synchronization occurs through app.oughtabee.ai</li>
+          <li>Your data is associated with your organization regardless of access point</li>
+          <li>The same privacy protections apply across all access methods</li>
+        </ul>
+        <h3>7.2 Organization Isolation</h3>
+        <p>Each organization's data is strictly isolated:</p>
+        <ul>
+          <li>Database queries are scoped to your organization</li>
+          <li>Vector embeddings are stored in organization-specific namespaces</li>
+          <li>No cross-organization data access is possible</li>
+        </ul>
+      </section>
 
-    <h3>8. Children's Privacy</h3>
-    <p>Our Service is not intended for individuals under 18 years of age. We do not knowingly collect personal information from children. If you become aware that a child has provided us with personal information, please contact us immediately.</p>
+      <section>
+        <h2>8. Children's Privacy</h2>
+        <p>Our Service is not intended for individuals under 18 years of age. We do not knowingly collect personal information from children. If you become aware that a child has provided us with personal information, please contact us immediately.</p>
+      </section>
 
-    <h3>9. International Data Transfers</h3>
-    <p>If you are accessing our Service from outside the United States, please be aware that your information may be transferred to, stored, and processed in the United States and other countries where our service providers operate.</p>
-    <p>By using our Service, you consent to the transfer of your information to countries outside your country of residence, which may have different data protection rules.</p>
+      <section>
+        <h2>9. International Data Transfers</h2>
+        <p>If you are accessing our Service from outside the United States, please be aware that your information may be transferred to, stored, and processed in the United States and other countries where our service providers operate.</p>
+        <p>By using our Service, you consent to the transfer of your information to countries outside your country of residence, which may have different data protection rules.</p>
+      </section>
 
-    <h3>10. Changes to This Privacy Policy</h3>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by:</p>
-    <ul>
-      <li>Posting the new Privacy Policy on this page</li>
-      <li>Updating the "Last Updated" date</li>
-      <li>Sending an email notification for significant changes</li>
-    </ul>
-    <p>Your continued use of the Service after any changes indicates your acceptance of the updated Privacy Policy.</p>
+      <section>
+        <h2>10. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by:</p>
+        <ul>
+          <li>Posting the new Privacy Policy on this page</li>
+          <li>Updating the "Last Updated" date</li>
+          <li>Sending an email notification for significant changes</li>
+        </ul>
+        <p>Your continued use of the Service after any changes indicates your acceptance of the updated Privacy Policy.</p>
+      </section>
 
-    <h3>11. California Privacy Rights (CCPA)</h3>
-    <p>If you are a California resident, you have specific rights regarding your personal information:</p>
-    <ul>
-      <li><strong>Right to Know:</strong> Request disclosure of personal information collected</li>
-      <li><strong>Right to Delete:</strong> Request deletion of your personal information</li>
-      <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your rights</li>
-      <li><strong>Right to Opt-Out of Sale:</strong> We do not sell personal information</li>
-    </ul>
-    <p>To exercise these rights, contact us using the information below.</p>
+      <section>
+        <h2>11. California Privacy Rights (CCPA)</h2>
+        <p>If you are a California resident, you have specific rights regarding your personal information:</p>
+        <ul>
+          <li><strong>Right to Know:</strong> Request disclosure of personal information collected</li>
+          <li><strong>Right to Delete:</strong> Request deletion of your personal information</li>
+          <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your rights</li>
+          <li><strong>Right to Opt-Out of Sale:</strong> We do not sell personal information</li>
+        </ul>
+        <p>To exercise these rights, contact us using the information below.</p>
+      </section>
 
-    <h3>12. European Privacy Rights (GDPR)</h3>
-    <p>If you are in the European Economic Area (EEA), you have additional rights:</p>
-    <ul>
-      <li><strong>Right of Access:</strong> Request a copy of your personal data</li>
-      <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
-      <li><strong>Right to Erasure:</strong> Request deletion of your data</li>
-      <li><strong>Right to Restrict Processing:</strong> Request limitation of processing</li>
-      <li><strong>Right to Data Portability:</strong> Receive your data in a portable format</li>
-      <li><strong>Right to Object:</strong> Object to processing based on legitimate interests</li>
-      <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time</li>
-    </ul>
-    <p><strong>Legal Basis for Processing:</strong></p>
-    <ul>
-      <li><strong>Contract Performance:</strong> Processing necessary to provide our Service</li>
-      <li><strong>Legitimate Interests:</strong> Improving our Service, ensuring security</li>
-      <li><strong>Consent:</strong> Where you have provided explicit consent</li>
-      <li><strong>Legal Obligation:</strong> Compliance with applicable laws</li>
-    </ul>
-    <p>To exercise these rights or file a complaint, contact us or your local data protection authority.</p>
+      <section>
+        <h2>12. European Privacy Rights (GDPR)</h2>
+        <p>If you are in the European Economic Area (EEA), you have additional rights:</p>
+        <ul>
+          <li><strong>Right of Access:</strong> Request a copy of your personal data</li>
+          <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
+          <li><strong>Right to Erasure:</strong> Request deletion of your data</li>
+          <li><strong>Right to Restrict Processing:</strong> Request limitation of processing</li>
+          <li><strong>Right to Data Portability:</strong> Receive your data in a portable format</li>
+          <li><strong>Right to Object:</strong> Object to processing based on legitimate interests</li>
+          <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time</li>
+        </ul>
+        <p><strong>Legal Basis for Processing:</strong></p>
+        <ul>
+          <li><strong>Contract Performance:</strong> Processing necessary to provide our Service</li>
+          <li><strong>Legitimate Interests:</strong> Improving our Service, ensuring security</li>
+          <li><strong>Consent:</strong> Where you have provided explicit consent</li>
+          <li><strong>Legal Obligation:</strong> Compliance with applicable laws</li>
+        </ul>
+        <p>To exercise these rights or file a complaint, contact us or your local data protection authority.</p>
+      </section>
 
-    <h3>13. Automated Decision Making</h3>
-    <p>Our Platform uses AI to automatically:</p>
-    <ul>
-      <li>Classify and categorize your content</li>
-      <li>Generate summaries and analysis</li>
-      <li>Extract topics, entities, and keywords</li>
-      <li>Assign visibility and audience classifications</li>
-    </ul>
-    <p>These automated processes help organize your knowledge base. You can manually review and modify AI-generated classifications through the Platform interface.</p>
+      <section>
+        <h2>13. Automated Decision Making</h2>
+        <p>Our Platform uses AI to automatically:</p>
+        <ul>
+          <li>Classify and categorize your content</li>
+          <li>Generate summaries and analysis</li>
+          <li>Extract topics, entities, and keywords</li>
+          <li>Assign visibility and audience classifications</li>
+        </ul>
+        <p>These automated processes help organize your knowledge base. You can manually review and modify AI-generated classifications through the Platform interface.</p>
+      </section>
 
-    <h3>14. Cookies and Tracking</h3>
-    <p>Our Platform uses essential cookies for:</p>
-    <ul>
-      <li><strong>Session Management:</strong> Maintaining your authenticated session</li>
-      <li><strong>Security:</strong> Protecting against unauthorized access</li>
-    </ul>
-    <p>We do not use advertising cookies, tracking pixels, or third-party analytics that track your activity across websites.</p>
+      <section>
+        <h2>14. Cookies and Tracking</h2>
+        <p>Our Platform uses essential cookies for:</p>
+        <ul>
+          <li><strong>Session Management:</strong> Maintaining your authenticated session</li>
+          <li><strong>Security:</strong> Protecting against unauthorized access</li>
+        </ul>
+        <p>We do not use advertising cookies, tracking pixels, or third-party analytics that track your activity across websites.</p>
+      </section>
 
-    <h3>15. Contact Us</h3>
-    <p>If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:</p>
-    <p><strong>Crafty Codr Inc.</strong></p>
-    <p>Email: <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a><br>Website: <a href="https://oughtabee.ai">https://oughtabee.ai</a></p>
+      <section>
+        <h2>15. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:</p>
+        <p><strong>Crafty Codr Inc.</strong><br>Email: <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a><br>Website: <a href="https://oughtabee.ai">oughtabee.ai</a></p>
+      </section>
 
-    <h3>16. Data Protection Officer</h3>
-    <p>For privacy-related concerns, you may contact our designated privacy representative at:</p>
-    <p>Email: <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a></p>
-
-    <p>This Privacy Policy is effective as of the date stated above and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.</p>
+      <section>
+        <h2>16. Data Protection Officer</h2>
+        <p>For privacy-related concerns, you may contact our designated privacy representative at:</p>
+        <p>Email: <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a></p>
+        <p class="legal-updated">This Privacy Policy is effective as of the date stated above and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.</p>
+      </section>
+    </div>
   </main>
 
+  <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
-    <div class="container">
-      <p><strong>Crafty Codr</strong></p>
-      <p><a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a> · <a href="https://oughtabee.ai">oughtabee.ai</a></p>
-      <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
-      <p>151 Lyndhurst Drive, Kitchener, Ontario N2B 1B7 Canada</p>
-      <p>SMS consent is not a condition of purchase.</p>
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="public/logo-dark.webp" alt="OughtaBee AI" class="footer-logo-icon">
+        <span>OughtaBee AI</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:trevor@oughtabee.ai">trevor@oughtabee.ai</a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2025 Crafty Codr Inc. All rights reserved.</span>
+      <span class="footer-copy">151 Lyndhurst Drive, Kitchener, Ontario N2B 1B7 Canada</span>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+      document.querySelector('.header-nav').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
