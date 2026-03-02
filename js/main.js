@@ -155,9 +155,9 @@ class Bee {
     const sector = (this.index + this.cycleCount) % 5;
     this.cycleCount++;
     // Expand virtual flight area: extend left (over content) and right (off-screen)
-    const expandLeft = 160;
-    const expandRight = 200;
-    const expandVert = 60;
+    const expandLeft = 80;
+    const expandRight = 80;
+    const expandVert = 40;
     const virtualW = r.width + expandLeft + expandRight;
     const virtualH = r.height + expandVert * 2;
     const target = pickSectorTarget(virtualW, virtualH, 0, sector, 5);
