@@ -1068,6 +1068,152 @@ body {
   color: var(--text-secondary);
 }
 
+/* ── Modal ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.55);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal {
+  background: var(--surface);
+  border-radius: 16px;
+  max-width: 480px;
+  width: 100%;
+  padding: 40px 36px 36px;
+  position: relative;
+  animation: modalSlideIn 0.25s ease-out;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+}
+.modal-close:hover {
+  color: var(--text);
+}
+.modal h2 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  text-align: center;
+}
+.modal-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.modal-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.modal-form input[type="text"],
+.modal-form input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-family: var(--font);
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.modal-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(21, 184, 166, 0.15);
+}
+.turnstile-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.turnstile-wrapper:not(:empty) {
+  margin-bottom: 20px;
+}
+.modal-submit {
+  display: block;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 14px 24px;
+}
+.modal-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+.modal-submit:disabled:hover {
+  transform: none;
+}
+.modal-submit .spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.form-error {
+  display: none;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.form-error.visible {
+  display: block;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
 /* ── Responsive ── */
 @media (max-width: 1100px) {
   .hero {
@@ -1113,6 +1259,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .modal {
+    padding: 32px 20px 28px;
+  }
+  .modal h2 {
+    font-size: 22px;
+  }
+  .modal-overlay {
+    padding: 16px;
+  }
   .header {
     padding: 16px 24px;
   }

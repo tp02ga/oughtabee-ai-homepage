@@ -386,7 +386,6 @@ class BeeSwarm {
     this.bees = [];
     this.rafId = null;
     this.isVisible = false;
-    this.prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // Build hub
     this.buildHub();
@@ -430,26 +429,6 @@ class BeeSwarm {
       for (let i = 0; i < 5; i++) {
         this.bees.push(new Bee(i, this.container, this.hubEl, this.trailSvg));
       }
-    }
-
-    if (this.prefersReducedMotion) {
-      // Spread bees at various positions, static with tooltips
-      const r = this.container.getBoundingClientRect();
-      const positions = [
-        { x: 0.2, y: 0.2 }, { x: 0.8, y: 0.15 },
-        { x: 0.5, y: 0.5 }, { x: 0.15, y: 0.8 }, { x: 0.85, y: 0.75 },
-      ];
-      this.bees.forEach((bee, i) => {
-        const p = positions[i];
-        bee.x = p.x * r.width;
-        bee.y = p.y * r.height;
-        bee.el.style.transform = `translate(${bee.x - 22}px, ${bee.y - 22}px)`;
-        bee.el.classList.add('active');
-        bee.tooltipEl.textContent = BEE_TASKS[i];
-        bee.tooltipEl.classList.add('visible');
-        bee.positionTooltip();
-      });
-      return;
     }
 
     this.animate();

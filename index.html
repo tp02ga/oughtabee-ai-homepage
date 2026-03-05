@@ -33,6 +33,8 @@
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1420027179611339&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
   <title>OughtaBee AI — Clone Your Brain. Scale Your Voice.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,7 +60,7 @@
       <a href="#how">How It Works</a>
       <a href="#team">About Us</a>
       <a href="https://blog.oughtabee.ai/">Blog</a>
-      <a href="https://leads.oughtabee.ai/apply" class="btn-primary btn-primary--sm">Apply Now <span>&rarr;</span></a>
+      <a href="https://leads.oughtabee.ai/apply" class="btn-primary btn-primary--sm">Sign Up for Free <span>&rarr;</span></a>
     </nav>
   </header>
 
@@ -75,7 +77,7 @@
     <div class="hero-animation" aria-hidden="true"></div>
     <p class="hero-desc fade-in">You have 3 years of Zoom calls and content gathering dust. We turn that into an autonomous agent that coaches your students exactly like you&nbsp;do.</p>
     <div class="hero-cta-row fade-in">
-      <a href="https://leads.oughtabee.ai/apply" class="btn-primary">Apply For Your Free Prototype <span>&rarr;</span></a>
+      <a href="https://leads.oughtabee.ai/apply" class="btn-primary">Sign Up for Free <span>&rarr;</span></a>
       <span class="hero-cta-note">No credit card. No commitment.</span>
     </div>
   </section>
@@ -282,7 +284,7 @@
   <section class="final-cta">
     <h2 class="fade-in">Ready to Clone Your Brain?</h2>
     <p class="final-cta-sub fade-in">Apply now to secure one of our 7 monthly pilot spots. We&rsquo;ll build your Phase 1 Prototype in 14 days &mdash; completely free.</p>
-    <a href="https://leads.oughtabee.ai/apply" class="btn-primary btn-primary--lg fade-in">APPLY FOR PILOT NOW <span>&rarr;</span></a>
+    <a href="https://leads.oughtabee.ai/apply" class="btn-primary btn-primary--lg fade-in">Sign Up for Free <span>&rarr;</span></a>
     <span class="final-cta-note fade-in">Limited to 7 coaches per month</span>
   </section>
 
@@ -306,8 +308,193 @@
     </div>
   </footer>
 
+  <!-- Apply Modal -->
+  <div class="modal-overlay" id="applyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <h2 id="modalTitle">Clone Your Brain Now for Free</h2>
+      <p class="modal-subtitle">Limited to 7 founders per month</p>
+      <form class="modal-form" id="applyForm" novalidate>
+        <div class="form-error" id="formError" role="alert"></div>
+        <label for="applyName">Full Name</label>
+        <input type="text" id="applyName" name="name" required autocomplete="name" placeholder="e.g. Jane Smith">
+        <label for="applyEmail">Email Address</label>
+        <input type="email" id="applyEmail" name="email" required autocomplete="email" placeholder="jane@company.com">
+        <div class="turnstile-wrapper" id="turnstileContainer"></div>
+        <button type="submit" class="btn-primary modal-submit" id="applySubmit">Sign Up for Free</button>
+      </form>
+    </div>
+  </div>
+
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="js/main.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    var API_URL = isLocal ? 'http://localhost:3002/api/webhooks/ghl/provision' : 'https://app.oughtabee.ai/api/webhooks/ghl/provision';
+    var TURNSTILE_SITEKEY = isLocal ? '1x00000000000000000000AA' : '0x4AAAAAACmy7ap58Q-s5vCF';
+
+    var overlay = document.getElementById('applyModal');
+    var modal = overlay.querySelector('.modal');
+    var closeBtn = document.getElementById('modalClose');
+    var form = document.getElementById('applyForm');
+    var nameInput = document.getElementById('applyName');
+    var emailInput = document.getElementById('applyEmail');
+    var submitBtn = document.getElementById('applySubmit');
+    var errorEl = document.getElementById('formError');
+    var turnstileContainer = document.getElementById('turnstileContainer');
+
+    var turnstileToken = null;
+    var turnstileWidgetId = null;
+    var turnstileRendered = false;
+
+    // Intercept all CTA links
+    var ctaLinks = document.querySelectorAll('a[href*="leads.oughtabee.ai/apply"]');
+    ctaLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    function openModal() {
+      overlay.classList.add('active');
+      document.body.classList.add('modal-open');
+      nameInput.focus();
+      renderTurnstile();
+    }
+
+    function closeModal() {
+      overlay.classList.remove('active');
+      document.body.classList.remove('modal-open');
+      form.reset();
+      hideError();
+      resetSubmitButton();
+      turnstileToken = null;
+      if (turnstileRendered && turnstileWidgetId !== null && window.turnstile) {
+        window.turnstile.reset(turnstileWidgetId);
+      }
+    }
+
+    function renderTurnstile() {
+      if (turnstileRendered || !window.turnstile) return;
+      turnstileRendered = true;
+      turnstileWidgetId = window.turnstile.render(turnstileContainer, {
+        sitekey: TURNSTILE_SITEKEY,
+        callback: function(token) { turnstileToken = token; },
+        'expired-callback': function() { turnstileToken = null; },
+        'error-callback': function() { turnstileToken = null; }
+      });
+    }
+
+    // Close triggers
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) {
+        closeModal();
+      }
+      // Focus trapping
+      if (e.key === 'Tab' && overlay.classList.contains('active')) {
+        var focusable = modal.querySelectorAll('button, input, [tabindex]:not([tabindex="-1"])');
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+    });
+
+    function showError(msg) {
+      errorEl.textContent = msg;
+      errorEl.classList.add('visible');
+    }
+
+    function hideError() {
+      errorEl.textContent = '';
+      errorEl.classList.remove('visible');
+    }
+
+    function resetSubmitButton() {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Sign Up for Free';
+    }
+
+    function setSubmitting() {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner"></span>Submitting\u2026';
+    }
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      hideError();
+
+      var name = nameInput.value.trim();
+      var email = emailInput.value.trim();
+
+      if (!name) { showError('Please enter your name.'); nameInput.focus(); return; }
+      if (!email) { showError('Please enter your email address.'); emailInput.focus(); return; }
+      if (!emailRegex.test(email)) { showError('Please enter a valid email address.'); emailInput.focus(); return; }
+
+      // If Turnstile hasn't loaded yet, try rendering again
+      if (!turnstileRendered && window.turnstile) {
+        renderTurnstile();
+      }
+
+      if (!turnstileToken) {
+        showError('Please complete the captcha verification.');
+        return;
+      }
+
+      setSubmitting();
+
+      fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          turnstileToken: turnstileToken
+        })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.success) {
+          window.location.href = data.redirectUrl;
+        } else {
+          showError(data.error || 'Something went wrong. Please try again.');
+          resetSubmitButton();
+          turnstileToken = null;
+          if (window.turnstile && turnstileWidgetId !== null) {
+            window.turnstile.reset(turnstileWidgetId);
+          }
+        }
+      })
+      .catch(function() {
+        showError('A network error occurred. Please try again.');
+        resetSubmitButton();
+        turnstileToken = null;
+        if (window.turnstile && turnstileWidgetId !== null) {
+          window.turnstile.reset(turnstileWidgetId);
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 
 </html>
