@@ -383,6 +383,7 @@
       turnstileRendered = true;
       turnstileWidgetId = window.turnstile.render(turnstileContainer, {
         sitekey: TURNSTILE_SITEKEY,
+        theme: 'light',
         callback: function(token) { turnstileToken = token; },
         'expired-callback': function() { turnstileToken = null; },
         'error-callback': function() { turnstileToken = null; }
