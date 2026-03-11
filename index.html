@@ -323,6 +323,10 @@
         <label for="applyEmail">Email Address</label>
         <input type="email" id="applyEmail" name="email" required autocomplete="email" placeholder="jane@company.com">
         <div class="turnstile-wrapper" id="turnstileContainer"></div>
+        <div class="privacy-check">
+          <input type="checkbox" id="applyPrivacy" name="privacy" required>
+          <label for="applyPrivacy">I have read and agree to the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a></label>
+        </div>
         <button type="submit" class="btn-primary modal-submit" id="applySubmit">Sign Up for Free</button>
       </form>
     </div>
@@ -348,6 +352,7 @@
     var errorEl = document.getElementById('formError');
     var turnstileContainer = document.getElementById('turnstileContainer');
 
+    var privacyCheck = document.getElementById('applyPrivacy');
     var turnstileToken = null;
     var turnstileWidgetId = null;
     var turnstileRendered = false;
@@ -452,6 +457,7 @@
       if (!name) { showError('Please enter your name.'); nameInput.focus(); return; }
       if (!email) { showError('Please enter your email address.'); emailInput.focus(); return; }
       if (!emailRegex.test(email)) { showError('Please enter a valid email address.'); emailInput.focus(); return; }
+      if (!privacyCheck.checked) { showError('Please confirm you have read the Privacy Policy.'); privacyCheck.focus(); return; }
 
       // If Turnstile hasn't loaded yet, try rendering again
       if (!turnstileRendered && window.turnstile) {
